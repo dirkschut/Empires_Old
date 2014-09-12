@@ -21,5 +21,10 @@ namespace Empires.forms
         {
             this.Text = "Main Menu - " + Finals.PROJECT_NAME + " " + Finals.PROJECT_VERSION;
         }
+
+        private void btn_ManagePackages_Click(object sender, EventArgs e)
+        {
+            new PackageManager().Show();
+        }
     }
 }

@@ -61,6 +61,7 @@
             this.btn_ManagePackages.TabIndex = 2;
             this.btn_ManagePackages.Text = "Package Manager";
             this.btn_ManagePackages.UseVisualStyleBackColor = true;
+            this.btn_ManagePackages.Click += new System.EventHandler(this.btn_ManagePackages_Click);
             // 
             // btn_Settings
             // 

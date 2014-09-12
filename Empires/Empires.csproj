@@ -50,6 +50,12 @@
     <Compile Include="forms\MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\PackageManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\PackageManager.Designer.cs">
+      <DependentUpon>PackageManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lib\Finals.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
