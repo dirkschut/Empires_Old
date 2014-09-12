@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Empires.Lib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,11 @@ namespace Empires.forms
         public MainMenu()
         {
             InitializeComponent();
+        }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+            this.Text = Finals.PROJECT_NAME + " " + Finals.PROJECT_VERSION;
         }
     }
 }
