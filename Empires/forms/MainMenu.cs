@@ -19,7 +19,7 @@ namespace Empires.forms
 
         private void MainMenu_Load(object sender, EventArgs e)
         {
-            this.Text = Finals.PROJECT_NAME + " " + Finals.PROJECT_VERSION;
+            this.Text = "Main Menu - " + Finals.PROJECT_NAME + " " + Finals.PROJECT_VERSION;
         }
     }
 }
