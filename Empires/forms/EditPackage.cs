@@ -62,10 +62,41 @@ namespace Empires.forms
         {
             Material mat = new Material();
             mat.name = tb_MaterialName.Text;
-            try { mat.generateInPlanets = Convert.ToDouble(tb_MaterialGenerateInPlanets.Text); } catch (Exception ex) { mat.generateInPlanets = 0; }
-            try { mat.generateInPlanetsAmount = Convert.ToDouble(tb_MaterialGenerateInPlanetsAmount.Text); } catch (Exception ex) { mat.generateInPlanetsAmount = 0; }
-            try { mat.generateInStars = Convert.ToDouble(tb_MaterialGenerateInStars.Text); } catch (Exception ex) { mat.generateInStars = 0; }
-            try { mat.generateInStarsAmount = Convert.ToDouble(tb_MaterialGenerateInStarsAmount.Text); } catch (Exception ex) { mat.generateInStarsAmount = 0; }
+            try
+            {
+                mat.generateInPlanets = Convert.ToDouble(tb_MaterialGenerateInPlanets.Text);
+            }
+            catch (Exception ex)
+            {
+                mat.generateInPlanets = 0;
+            }
+
+            try
+            {
+                mat.generateInPlanetsAmount = Convert.ToDouble(tb_MaterialGenerateInPlanetsAmount.Text);
+            }
+            catch (Exception ex)
+            {
+                mat.generateInPlanetsAmount = 0;
+            }
+
+            try
+            {
+                mat.generateInStars = Convert.ToDouble(tb_MaterialGenerateInStars.Text);
+            }
+            catch (Exception ex)
+            {
+                mat.generateInStars = 0;
+            }
+
+            try
+            {
+                mat.generateInStarsAmount = Convert.ToDouble(tb_MaterialGenerateInStarsAmount.Text);
+            }
+            catch (Exception ex)
+            {
+                mat.generateInStarsAmount = 0;
+            }
 
             package.data.materials.Add(mat);
             loadData();
