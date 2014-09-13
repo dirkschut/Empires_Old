@@ -32,11 +32,19 @@ namespace Empires.Game.GameWorld
 
             if (generate)
             {
-                int amountOfPlanets = rand.Next(3, 20);
+                int amountOfPlanets = rand.Next(Finals.MIN_PLANETS, Finals.MAX_PLANETS);
                 for (int i = 0; i < amountOfPlanets; i++)
                 {
                     Objects.game.data.bodies.Add(new Body(false, ID, Body.TYPE_PLANET));
                 }
+
+                int amountOfAsteroids = rand.Next(Finals.MIN_ASTEROIDS, Finals.MAX_ASTEROIDS);
+                for (int i = 0; i < amountOfAsteroids; i++)
+                {
+                    Objects.game.data.bodies.Add(new Body(false, ID, Body.TYPE_ASTROID));
+                }
+
+                generated = true;
             }
             else
             {

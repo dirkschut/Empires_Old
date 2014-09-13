@@ -19,7 +19,7 @@ namespace Empires.Game.GameWorld
 
             Objects.game.data.galaxies.Add(new Galaxy(true, ID));
 
-            int amountOfGalaxies = new Random().Next(1000, 100000);
+            int amountOfGalaxies = new Random().Next(Finals.MIN_GALAXIES, Finals.MAX_GALAXIES);
             for (int i = 0; i < amountOfGalaxies; i++)
             {
                 Objects.game.data.galaxies.Add(new Galaxy(false, ID));
