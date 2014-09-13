@@ -41,6 +41,7 @@
             this.lbl_PackageAuthor = new System.Windows.Forms.Label();
             this.btn_GetPackages = new System.Windows.Forms.Button();
             this.btn_EditPackage = new System.Windows.Forms.Button();
+            this.btn_Refresh = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lb_Packages
@@ -48,7 +49,7 @@
             this.lb_Packages.FormattingEnabled = true;
             this.lb_Packages.Location = new System.Drawing.Point(13, 13);
             this.lb_Packages.Name = "lb_Packages";
-            this.lb_Packages.Size = new System.Drawing.Size(217, 511);
+            this.lb_Packages.Size = new System.Drawing.Size(217, 472);
             this.lb_Packages.TabIndex = 0;
             // 
             // btn_NewPackage
@@ -160,11 +161,22 @@
             this.btn_EditPackage.Text = "Edit Package";
             this.btn_EditPackage.UseVisualStyleBackColor = true;
             // 
+            // btn_Refresh
+            // 
+            this.btn_Refresh.Location = new System.Drawing.Point(13, 497);
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.Size = new System.Drawing.Size(217, 23);
+            this.btn_Refresh.TabIndex = 14;
+            this.btn_Refresh.Text = "Refresh";
+            this.btn_Refresh.UseVisualStyleBackColor = true;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
+            // 
             // PackageManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.btn_Refresh);
             this.Controls.Add(this.btn_EditPackage);
             this.Controls.Add(this.btn_GetPackages);
             this.Controls.Add(this.lbl_PackageAuthor);
@@ -203,5 +215,6 @@
         private System.Windows.Forms.Label lbl_PackageAuthor;
         private System.Windows.Forms.Button btn_GetPackages;
         private System.Windows.Forms.Button btn_EditPackage;
+        private System.Windows.Forms.Button btn_Refresh;
     }
 }

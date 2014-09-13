@@ -21,16 +21,27 @@ namespace Empires.forms
 
         private void PackageManager_Load(object sender, EventArgs e)
         {
-            packages = Packages.GetPackages();
-            foreach (Package package in packages)
-            {
-                this.lb_Packages.Items.Add(package.getPath());
-            }
+            refresh();
         }
 
         private void btn_NewPackage_Click(object sender, EventArgs e)
         {
             new EditPackage(new Package()).Show();
+        }
+
+        private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+            refresh();
+        }
+
+        private void refresh()
+        {
+            packages = Packages.GetPackages();
+            this.lb_Packages.Items.Clear();
+            foreach (Package package in packages)
+            {
+                this.lb_Packages.Items.Add(package.getPath());
+            }
         }
     }
 }
