@@ -115,5 +115,14 @@ namespace Empires.forms
             this.tb_MaterialGenerateInStars.Text = package.data.materials[lb_Materials.SelectedIndex].generateInStars.ToString();
             this.tb_MaterialGenerateInStarsAmount.Text = package.data.materials[lb_Materials.SelectedIndex].generateInStarsAmount.ToString();
         }
+
+        private void btn_DeleteMaterial_Click(object sender, EventArgs e)
+        {
+            if (lb_Materials.SelectedIndex >= 0 && lb_Materials.SelectedIndex < package.data.materials.Count)
+            {
+                package.data.materials.RemoveAt(lb_Materials.SelectedIndex);
+            }
+            loadData();
+        }
     }
 }

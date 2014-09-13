@@ -203,6 +203,7 @@
             this.btn_DeleteMaterial.TabIndex = 13;
             this.btn_DeleteMaterial.Text = "Delete Material";
             this.btn_DeleteMaterial.UseVisualStyleBackColor = true;
+            this.btn_DeleteMaterial.Click += new System.EventHandler(this.btn_DeleteMaterial_Click);
             // 
             // tb_MaterialGenerateInPlanets
             // 
