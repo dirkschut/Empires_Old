@@ -113,6 +113,7 @@ namespace Empires.forms
             Objects.game = game;
             Objects.game.generate();
             Objects.game.save();
+            Objects.game = null;
             this.Close();
         }
 
