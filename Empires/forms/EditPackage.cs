@@ -101,5 +101,19 @@ namespace Empires.forms
             package.data.materials.Add(mat);
             loadData();
         }
+
+        private void lb_Materials_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            loadMaterialData();
+        }
+
+        private void loadMaterialData()
+        {
+            this.tb_MaterialName.Text = package.data.materials[lb_Materials.SelectedIndex].name;
+            this.tb_MaterialGenerateInPlanets.Text = package.data.materials[lb_Materials.SelectedIndex].generateInPlanets.ToString();
+            this.tb_MaterialGenerateInPlanetsAmount.Text = package.data.materials[lb_Materials.SelectedIndex].generateInPlanetsAmount.ToString();
+            this.tb_MaterialGenerateInStars.Text = package.data.materials[lb_Materials.SelectedIndex].generateInStars.ToString();
+            this.tb_MaterialGenerateInStarsAmount.Text = package.data.materials[lb_Materials.SelectedIndex].generateInStarsAmount.ToString();
+        }
     }
 }

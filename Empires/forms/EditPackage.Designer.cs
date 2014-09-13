@@ -291,6 +291,7 @@
             this.lb_Materials.Name = "lb_Materials";
             this.lb_Materials.Size = new System.Drawing.Size(214, 446);
             this.lb_Materials.TabIndex = 0;
+            this.lb_Materials.SelectedIndexChanged += new System.EventHandler(this.lb_Materials_SelectedIndexChanged);
             // 
             // btn_SavePackage
             // 
