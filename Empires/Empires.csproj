@@ -51,6 +51,12 @@
     <Compile Include="forms\EditPackage.Designer.cs">
       <DependentUpon>EditPackage.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\LoadGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\LoadGame.Designer.cs">
+      <DependentUpon>LoadGame.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\NewGame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="forms\EditPackage.resx">
       <DependentUpon>EditPackage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\LoadGame.resx">
+      <DependentUpon>LoadGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>

@@ -31,5 +31,10 @@ namespace Empires.forms
         {
             new NewGame().Show();
         }
+
+        private void btn_LoadGame_Click(object sender, EventArgs e)
+        {
+            new LoadGame().Show();
+        }
     }
 }

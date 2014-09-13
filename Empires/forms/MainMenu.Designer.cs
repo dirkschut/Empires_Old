@@ -53,6 +53,7 @@
             this.btn_LoadGame.TabIndex = 1;
             this.btn_LoadGame.Text = "Load Game";
             this.btn_LoadGame.UseVisualStyleBackColor = true;
+            this.btn_LoadGame.Click += new System.EventHandler(this.btn_LoadGame_Click);
             // 
             // btn_ManagePackages
             // 
