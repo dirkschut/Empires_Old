@@ -82,6 +82,7 @@
             this.MaximizeBox = false;
             this.Name = "LoadGame";
             this.Text = "Load Game";
+            this.Load += new System.EventHandler(this.LoadGame_Load);
             this.ResumeLayout(false);
 
         }
