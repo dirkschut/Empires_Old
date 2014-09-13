@@ -57,6 +57,8 @@
     <Compile Include="forms\PackageManager.Designer.cs">
       <DependentUpon>PackageManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="IO\Packages\Package.cs" />
+    <Compile Include="IO\Packages\Packages.cs" />
     <Compile Include="Lib\Finals.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

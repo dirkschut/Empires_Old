@@ -170,6 +170,7 @@
             this.MaximizeBox = false;
             this.Name = "PackageManager";
             this.Text = "PackageManager";
+            this.Load += new System.EventHandler(this.PackageManager_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

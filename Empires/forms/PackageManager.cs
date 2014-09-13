@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Empires.IO.Packages;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,9 +12,16 @@ namespace Empires.forms
 {
     public partial class PackageManager : Form
     {
+        private Package[] packages;
+
         public PackageManager()
         {
             InitializeComponent();
+        }
+
+        private void PackageManager_Load(object sender, EventArgs e)
+        {
+            packages = Packages.GetPackages();
         }
     }
 }
