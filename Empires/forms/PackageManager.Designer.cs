@@ -40,6 +40,7 @@
             this.lbl_PackageAuthorValue = new System.Windows.Forms.Label();
             this.lbl_PackageAuthor = new System.Windows.Forms.Label();
             this.btn_GetPackages = new System.Windows.Forms.Button();
+            this.btn_EditPackage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lb_Packages
@@ -63,7 +64,7 @@
             // 
             this.btn_Delete.Location = new System.Drawing.Point(237, 13);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(535, 23);
+            this.btn_Delete.Size = new System.Drawing.Size(270, 23);
             this.btn_Delete.TabIndex = 2;
             this.btn_Delete.Text = "Delete Package";
             this.btn_Delete.UseVisualStyleBackColor = true;
@@ -149,11 +150,21 @@
             this.btn_GetPackages.Text = "Get Packages";
             this.btn_GetPackages.UseVisualStyleBackColor = true;
             // 
+            // btn_EditPackage
+            // 
+            this.btn_EditPackage.Location = new System.Drawing.Point(514, 13);
+            this.btn_EditPackage.Name = "btn_EditPackage";
+            this.btn_EditPackage.Size = new System.Drawing.Size(258, 23);
+            this.btn_EditPackage.TabIndex = 13;
+            this.btn_EditPackage.Text = "Edit Package";
+            this.btn_EditPackage.UseVisualStyleBackColor = true;
+            // 
             // PackageManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.btn_EditPackage);
             this.Controls.Add(this.btn_GetPackages);
             this.Controls.Add(this.lbl_PackageAuthor);
             this.Controls.Add(this.lbl_PackageAuthorValue);
@@ -190,5 +201,6 @@
         private System.Windows.Forms.Label lbl_PackageAuthorValue;
         private System.Windows.Forms.Label lbl_PackageAuthor;
         private System.Windows.Forms.Button btn_GetPackages;
+        private System.Windows.Forms.Button btn_EditPackage;
     }
 }
