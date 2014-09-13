@@ -17,6 +17,7 @@ namespace Empires
         {
             DirectoryManager.CheckCreate("");
             DirectoryManager.CheckCreate("packages\\");
+            DirectoryManager.CheckCreate("saves\\");
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
