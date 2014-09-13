@@ -1,4 +1,5 @@
-﻿using Empires.IO.Packages;
+﻿using Empires.Game.GameWorld;
+using Empires.IO.Packages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,7 @@ namespace Empires.Game
 
         public Double resourceModifier;
         public Double startingPopulation;
+
+        public Universe universe;
     }
 }
