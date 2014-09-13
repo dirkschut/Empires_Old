@@ -25,5 +25,6 @@ namespace Empires.Game
         public List<Galaxy> galaxies;
         public List<SolarSystem> solarSystems;
         public List<Body> bodies;
+        public List<Zone> zones;
     }
 }
