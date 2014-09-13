@@ -48,5 +48,27 @@ namespace Empires.forms
 
             package.save();
         }
+
+        private void btn_NewMaterial_Click(object sender, EventArgs e)
+        {
+            this.tb_MaterialName.Clear();
+            this.tb_MaterialGenerateInPlanets.Clear();
+            this.tb_MaterialGenerateInPlanetsAmount.Clear();
+            this.tb_MaterialGenerateInStars.Clear();
+            this.tb_MaterialGenerateInStarsAmount.Clear();
+        }
+
+        private void btn_SaveMaterial_Click(object sender, EventArgs e)
+        {
+            Material mat = new Material();
+            mat.name = tb_MaterialName.Text;
+            try { mat.generateInPlanets = Convert.ToDouble(tb_MaterialGenerateInPlanets.Text); } catch (Exception ex) { mat.generateInPlanets = 0; }
+            try { mat.generateInPlanetsAmount = Convert.ToDouble(tb_MaterialGenerateInPlanetsAmount.Text); } catch (Exception ex) { mat.generateInPlanetsAmount = 0; }
+            try { mat.generateInStars = Convert.ToDouble(tb_MaterialGenerateInStars.Text); } catch (Exception ex) { mat.generateInStars = 0; }
+            try { mat.generateInStarsAmount = Convert.ToDouble(tb_MaterialGenerateInStarsAmount.Text); } catch (Exception ex) { mat.generateInStarsAmount = 0; }
+
+            package.data.materials.Add(mat);
+            loadData();
+        }
     }
 }

@@ -39,10 +39,13 @@
             this.lbl_PackageID = new System.Windows.Forms.Label();
             this.lbl_PackageName = new System.Windows.Forms.Label();
             this.tp_Materials = new System.Windows.Forms.TabPage();
-            this.tb_GenerateInPlanets = new System.Windows.Forms.TextBox();
-            this.tb_GenerateInPlanetsAmount = new System.Windows.Forms.TextBox();
-            this.tb_GenerateInStars = new System.Windows.Forms.TextBox();
-            this.tb_GenerateInStarsAmount = new System.Windows.Forms.TextBox();
+            this.btn_NewMaterial = new System.Windows.Forms.Button();
+            this.btn_SaveMaterial = new System.Windows.Forms.Button();
+            this.btn_DeleteMaterial = new System.Windows.Forms.Button();
+            this.tb_MaterialGenerateInPlanets = new System.Windows.Forms.TextBox();
+            this.tb_MaterialGenerateInPlanetsAmount = new System.Windows.Forms.TextBox();
+            this.tb_MaterialGenerateInStars = new System.Windows.Forms.TextBox();
+            this.tb_MaterialGenerateInStarsAmount = new System.Windows.Forms.TextBox();
             this.tb_MaterialName = new System.Windows.Forms.TextBox();
             this.lbl_GenerateInPlanets = new System.Windows.Forms.Label();
             this.lbl_GenerateInPlanetsAmount = new System.Windows.Forms.Label();
@@ -51,9 +54,6 @@
             this.lbl_MaterialName = new System.Windows.Forms.Label();
             this.lb_Materials = new System.Windows.Forms.ListBox();
             this.btn_SavePackage = new System.Windows.Forms.Button();
-            this.btn_DeleteMaterial = new System.Windows.Forms.Button();
-            this.btn_SaveMaterial = new System.Windows.Forms.Button();
-            this.btn_NewMaterial = new System.Windows.Forms.Button();
             this.tc_PackageEditor.SuspendLayout();
             this.tp_PackageDetails.SuspendLayout();
             this.tp_Materials.SuspendLayout();
@@ -156,10 +156,10 @@
             this.tp_Materials.Controls.Add(this.btn_NewMaterial);
             this.tp_Materials.Controls.Add(this.btn_SaveMaterial);
             this.tp_Materials.Controls.Add(this.btn_DeleteMaterial);
-            this.tp_Materials.Controls.Add(this.tb_GenerateInPlanets);
-            this.tp_Materials.Controls.Add(this.tb_GenerateInPlanetsAmount);
-            this.tp_Materials.Controls.Add(this.tb_GenerateInStars);
-            this.tp_Materials.Controls.Add(this.tb_GenerateInStarsAmount);
+            this.tp_Materials.Controls.Add(this.tb_MaterialGenerateInPlanets);
+            this.tp_Materials.Controls.Add(this.tb_MaterialGenerateInPlanetsAmount);
+            this.tp_Materials.Controls.Add(this.tb_MaterialGenerateInStars);
+            this.tp_Materials.Controls.Add(this.tb_MaterialGenerateInStarsAmount);
             this.tp_Materials.Controls.Add(this.tb_MaterialName);
             this.tp_Materials.Controls.Add(this.lbl_GenerateInPlanets);
             this.tp_Materials.Controls.Add(this.lbl_GenerateInPlanetsAmount);
@@ -175,33 +175,62 @@
             this.tp_Materials.Text = "Materials";
             this.tp_Materials.UseVisualStyleBackColor = true;
             // 
-            // tb_GenerateInPlanets
+            // btn_NewMaterial
             // 
-            this.tb_GenerateInPlanets.Location = new System.Drawing.Point(373, 32);
-            this.tb_GenerateInPlanets.Name = "tb_GenerateInPlanets";
-            this.tb_GenerateInPlanets.Size = new System.Drawing.Size(372, 20);
-            this.tb_GenerateInPlanets.TabIndex = 12;
+            this.btn_NewMaterial.Location = new System.Drawing.Point(7, 452);
+            this.btn_NewMaterial.Name = "btn_NewMaterial";
+            this.btn_NewMaterial.Size = new System.Drawing.Size(214, 23);
+            this.btn_NewMaterial.TabIndex = 15;
+            this.btn_NewMaterial.Text = "New Material";
+            this.btn_NewMaterial.UseVisualStyleBackColor = true;
+            this.btn_NewMaterial.Click += new System.EventHandler(this.btn_NewMaterial_Click);
             // 
-            // tb_GenerateInPlanetsAmount
+            // btn_SaveMaterial
             // 
-            this.tb_GenerateInPlanetsAmount.Location = new System.Drawing.Point(373, 58);
-            this.tb_GenerateInPlanetsAmount.Name = "tb_GenerateInPlanetsAmount";
-            this.tb_GenerateInPlanetsAmount.Size = new System.Drawing.Size(372, 20);
-            this.tb_GenerateInPlanetsAmount.TabIndex = 11;
+            this.btn_SaveMaterial.Location = new System.Drawing.Point(493, 452);
+            this.btn_SaveMaterial.Name = "btn_SaveMaterial";
+            this.btn_SaveMaterial.Size = new System.Drawing.Size(252, 23);
+            this.btn_SaveMaterial.TabIndex = 14;
+            this.btn_SaveMaterial.Text = "Save Material";
+            this.btn_SaveMaterial.UseVisualStyleBackColor = true;
+            this.btn_SaveMaterial.Click += new System.EventHandler(this.btn_SaveMaterial_Click);
             // 
-            // tb_GenerateInStars
+            // btn_DeleteMaterial
             // 
-            this.tb_GenerateInStars.Location = new System.Drawing.Point(373, 84);
-            this.tb_GenerateInStars.Name = "tb_GenerateInStars";
-            this.tb_GenerateInStars.Size = new System.Drawing.Size(372, 20);
-            this.tb_GenerateInStars.TabIndex = 10;
+            this.btn_DeleteMaterial.Location = new System.Drawing.Point(228, 452);
+            this.btn_DeleteMaterial.Name = "btn_DeleteMaterial";
+            this.btn_DeleteMaterial.Size = new System.Drawing.Size(258, 23);
+            this.btn_DeleteMaterial.TabIndex = 13;
+            this.btn_DeleteMaterial.Text = "Delete Material";
+            this.btn_DeleteMaterial.UseVisualStyleBackColor = true;
             // 
-            // tb_GenerateInStarsAmount
+            // tb_MaterialGenerateInPlanets
             // 
-            this.tb_GenerateInStarsAmount.Location = new System.Drawing.Point(373, 110);
-            this.tb_GenerateInStarsAmount.Name = "tb_GenerateInStarsAmount";
-            this.tb_GenerateInStarsAmount.Size = new System.Drawing.Size(372, 20);
-            this.tb_GenerateInStarsAmount.TabIndex = 9;
+            this.tb_MaterialGenerateInPlanets.Location = new System.Drawing.Point(373, 32);
+            this.tb_MaterialGenerateInPlanets.Name = "tb_MaterialGenerateInPlanets";
+            this.tb_MaterialGenerateInPlanets.Size = new System.Drawing.Size(372, 20);
+            this.tb_MaterialGenerateInPlanets.TabIndex = 12;
+            // 
+            // tb_MaterialGenerateInPlanetsAmount
+            // 
+            this.tb_MaterialGenerateInPlanetsAmount.Location = new System.Drawing.Point(373, 58);
+            this.tb_MaterialGenerateInPlanetsAmount.Name = "tb_MaterialGenerateInPlanetsAmount";
+            this.tb_MaterialGenerateInPlanetsAmount.Size = new System.Drawing.Size(372, 20);
+            this.tb_MaterialGenerateInPlanetsAmount.TabIndex = 11;
+            // 
+            // tb_MaterialGenerateInStars
+            // 
+            this.tb_MaterialGenerateInStars.Location = new System.Drawing.Point(373, 84);
+            this.tb_MaterialGenerateInStars.Name = "tb_MaterialGenerateInStars";
+            this.tb_MaterialGenerateInStars.Size = new System.Drawing.Size(372, 20);
+            this.tb_MaterialGenerateInStars.TabIndex = 10;
+            // 
+            // tb_MaterialGenerateInStarsAmount
+            // 
+            this.tb_MaterialGenerateInStarsAmount.Location = new System.Drawing.Point(373, 110);
+            this.tb_MaterialGenerateInStarsAmount.Name = "tb_MaterialGenerateInStarsAmount";
+            this.tb_MaterialGenerateInStarsAmount.Size = new System.Drawing.Size(372, 20);
+            this.tb_MaterialGenerateInStarsAmount.TabIndex = 9;
             // 
             // tb_MaterialName
             // 
@@ -273,33 +302,6 @@
             this.btn_SavePackage.UseVisualStyleBackColor = true;
             this.btn_SavePackage.Click += new System.EventHandler(this.btn_SavePackage_Click);
             // 
-            // btn_DeleteMaterial
-            // 
-            this.btn_DeleteMaterial.Location = new System.Drawing.Point(228, 452);
-            this.btn_DeleteMaterial.Name = "btn_DeleteMaterial";
-            this.btn_DeleteMaterial.Size = new System.Drawing.Size(258, 23);
-            this.btn_DeleteMaterial.TabIndex = 13;
-            this.btn_DeleteMaterial.Text = "Delete Material";
-            this.btn_DeleteMaterial.UseVisualStyleBackColor = true;
-            // 
-            // btn_SaveMaterial
-            // 
-            this.btn_SaveMaterial.Location = new System.Drawing.Point(493, 452);
-            this.btn_SaveMaterial.Name = "btn_SaveMaterial";
-            this.btn_SaveMaterial.Size = new System.Drawing.Size(252, 23);
-            this.btn_SaveMaterial.TabIndex = 14;
-            this.btn_SaveMaterial.Text = "Save Material";
-            this.btn_SaveMaterial.UseVisualStyleBackColor = true;
-            // 
-            // btn_NewMaterial
-            // 
-            this.btn_NewMaterial.Location = new System.Drawing.Point(7, 452);
-            this.btn_NewMaterial.Name = "btn_NewMaterial";
-            this.btn_NewMaterial.Size = new System.Drawing.Size(214, 23);
-            this.btn_NewMaterial.TabIndex = 15;
-            this.btn_NewMaterial.Text = "New Material";
-            this.btn_NewMaterial.UseVisualStyleBackColor = true;
-            // 
             // EditPackage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,10 +337,10 @@
         private System.Windows.Forms.Label lbl_PackageName;
         private System.Windows.Forms.Button btn_SavePackage;
         private System.Windows.Forms.ListBox lb_Materials;
-        private System.Windows.Forms.TextBox tb_GenerateInPlanets;
-        private System.Windows.Forms.TextBox tb_GenerateInPlanetsAmount;
-        private System.Windows.Forms.TextBox tb_GenerateInStars;
-        private System.Windows.Forms.TextBox tb_GenerateInStarsAmount;
+        private System.Windows.Forms.TextBox tb_MaterialGenerateInPlanets;
+        private System.Windows.Forms.TextBox tb_MaterialGenerateInPlanetsAmount;
+        private System.Windows.Forms.TextBox tb_MaterialGenerateInStars;
+        private System.Windows.Forms.TextBox tb_MaterialGenerateInStarsAmount;
         private System.Windows.Forms.TextBox tb_MaterialName;
         private System.Windows.Forms.Label lbl_GenerateInPlanets;
         private System.Windows.Forms.Label lbl_GenerateInPlanetsAmount;
