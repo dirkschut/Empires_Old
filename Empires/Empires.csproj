@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IO\DirectoryManager.cs" />
     <Compile Include="forms\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>

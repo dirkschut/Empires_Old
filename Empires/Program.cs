@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 
 using Empires.forms;
+using System.IO;
 namespace Empires
 {
     static class Program
@@ -14,6 +15,9 @@ namespace Empires
         [STAThread]
         static void Main()
         {
+            DirectoryManager.CheckCreate("");
+            DirectoryManager.CheckCreate("packages\\");
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new forms.MainMenu());
