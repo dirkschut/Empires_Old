@@ -17,12 +17,12 @@ namespace Empires.Game.GameWorld
             ID = Objects.game.data.universeCounter;
             Objects.game.data.universeCounter++;
 
-            Objects.game.data.galaxies.Add(new Galaxy(true));
+            Objects.game.data.galaxies.Add(new Galaxy(true, ID));
 
             int amountOfGalaxies = new Random().Next(1000, 100000);
             for (int i = 0; i < amountOfGalaxies; i++)
             {
-                Objects.game.data.galaxies.Add(new Galaxy(false));
+                Objects.game.data.galaxies.Add(new Galaxy(false, ID));
             }
         }
     }
