@@ -32,6 +32,7 @@ namespace Empires.Game.GameWorld
 
             if (generate)
             {
+                Objects.game.data.solarSystems.Add(new SolarSystem(true, ID));
                 int numberOfSolarSystems = rand.Next(1000, 100000);
                 for (int i = 0; i < numberOfSolarSystems; i++)
                 {

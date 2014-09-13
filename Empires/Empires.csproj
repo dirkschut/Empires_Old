@@ -68,6 +68,7 @@
     <Compile Include="Game\GameWorld\Galaxy.cs" />
     <Compile Include="Game\GameWorld\SolarSystem.cs" />
     <Compile Include="Game\GameWorld\Universe.cs" />
+    <Compile Include="Game\GameWorld\Zone.cs" />
     <Compile Include="IO\DirectoryManager.cs" />
     <Compile Include="forms\MainMenu.cs">
       <SubType>Form</SubType>
