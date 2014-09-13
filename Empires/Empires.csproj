@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="forms\EditPackage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\EditPackage.Designer.cs">
+      <DependentUpon>EditPackage.cs</DependentUpon>
+    </Compile>
     <Compile Include="IO\DirectoryManager.cs" />
     <Compile Include="forms\MainMenu.cs">
       <SubType>Form</SubType>
@@ -62,6 +68,9 @@
     <Compile Include="Lib\Finals.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="forms\EditPackage.resx">
+      <DependentUpon>EditPackage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
