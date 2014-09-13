@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Empires.Game.GameWorld
 {
-    class Body
+    public class Body
     {
         public String name;
     }

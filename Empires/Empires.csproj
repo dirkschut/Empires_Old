@@ -86,6 +86,7 @@
     <Compile Include="IO\Packages\PackageData.cs" />
     <Compile Include="IO\Packages\Packages.cs" />
     <Compile Include="Lib\Finals.cs" />
+    <Compile Include="Lib\Objects.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="forms\EditPackage.resx">

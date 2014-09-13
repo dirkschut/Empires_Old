@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 using Empires.Game;
 using Empires.IO.Packages;
+using Empires.Lib;
 
 namespace Empires.forms
 {
@@ -109,7 +110,9 @@ namespace Empires.forms
 
             game.data.packages = packagesToUse;
 
-            game.save();
+            Objects.game = game;
+            Objects.game.generate();
+            Objects.game.save();
             this.Close();
         }
 

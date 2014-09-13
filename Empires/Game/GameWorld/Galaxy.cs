@@ -1,12 +1,21 @@
-﻿using System;
+﻿using Empires.Lib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace Empires.Game.GameWorld
 {
-    class Galaxy
+    public class Galaxy
     {
         public String name;
+
+        public int ID;
+
+        public Galaxy(Boolean playerUniverse)
+        {
+            this.ID = Objects.game.data.galaxyCounter;
+            Objects.game.data.galaxyCounter++;
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Empires.Game.GameWorld;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -54,6 +55,15 @@ namespace Empires.Game
                 json = sr.ReadLine();
                 data = JsonConvert.DeserializeObject<GameData>(json);
             }
+        }
+
+        public void generate()
+        {
+            data.universes = new List<Universe>();
+            data.galaxies = new List<Galaxy>();
+            data.solarSystems = new List<SolarSystem>();
+            data.bodies = new List<Body>();
+            data.universes.Add(new Universe());
         }
     }
 }

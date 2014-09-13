@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Empires.Game.GameWorld
+namespace Empires.Lib
 {
-    public class SolarSystem
+    class Objects
     {
-        public String name;
+        public static Game.Game game;
     }
 }
