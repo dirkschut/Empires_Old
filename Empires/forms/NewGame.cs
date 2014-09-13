@@ -85,6 +85,30 @@ namespace Empires.forms
                 game.data.startingPopulation = 1000;
             }
 
+            int counter = 0;
+
+            for (int i = 0; i < packages.Length; i++)
+            {
+                if (packagesIn[i])
+                {
+                    counter++;
+                }
+            }
+
+            Package[] packagesToUse = new Package[counter];
+            counter = 0;
+
+            for (int i = 0; i < packages.Length; i++)
+            {
+                if (packagesIn[i])
+                {
+                    packagesToUse[counter] = packages[i];
+                    counter++;
+                }
+            }
+
+            game.data.packages = packagesToUse;
+
             game.save();
             this.Close();
         }
