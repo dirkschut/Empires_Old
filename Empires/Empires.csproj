@@ -64,6 +64,10 @@
       <DependentUpon>NewGame.cs</DependentUpon>
     </Compile>
     <Compile Include="Game\Game.cs" />
+    <Compile Include="Game\GameWorld\Body.cs" />
+    <Compile Include="Game\GameWorld\Galaxy.cs" />
+    <Compile Include="Game\GameWorld\SolarSystem.cs" />
+    <Compile Include="Game\GameWorld\Universe.cs" />
     <Compile Include="IO\DirectoryManager.cs" />
     <Compile Include="forms\MainMenu.cs">
       <SubType>Form</SubType>
@@ -121,6 +125,7 @@
   <ItemGroup>
     <Compile Include="Game\GameData.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

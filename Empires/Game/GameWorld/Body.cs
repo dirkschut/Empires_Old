@@ -7,5 +7,6 @@ namespace Empires.Game.GameWorld
 {
     class Body
     {
+        public String name;
     }
 }

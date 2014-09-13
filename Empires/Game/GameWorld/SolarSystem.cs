@@ -8,5 +8,7 @@ namespace Empires.Game.GameWorld
     class SolarSystem
     {
         public List<Body> bodies;
+
+        public String name;
     }
 }
