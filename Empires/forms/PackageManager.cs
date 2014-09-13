@@ -40,7 +40,7 @@ namespace Empires.forms
             this.lb_Packages.Items.Clear();
             foreach (Package package in packages)
             {
-                this.lb_Packages.Items.Add(package.getPath());
+                this.lb_Packages.Items.Add(package.data.name);
             }
         }
     }
