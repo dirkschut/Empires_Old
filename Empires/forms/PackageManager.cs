@@ -60,5 +60,11 @@ namespace Empires.forms
         {
             loadPackageData(lb_Packages.SelectedIndex);
         }
+
+        private void btn_EditPackage_Click(object sender, EventArgs e)
+        {
+            if(lb_Packages.SelectedIndex >= 0 && lb_Packages.SelectedIndex < packages.Length)
+                new EditPackage(packages[lb_Packages.SelectedIndex]).Show();
+        }
     }
 }

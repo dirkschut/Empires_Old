@@ -161,6 +161,7 @@
             this.btn_EditPackage.TabIndex = 13;
             this.btn_EditPackage.Text = "Edit Package";
             this.btn_EditPackage.UseVisualStyleBackColor = true;
+            this.btn_EditPackage.Click += new System.EventHandler(this.btn_EditPackage_Click);
             // 
             // btn_Refresh
             // 
