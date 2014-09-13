@@ -16,9 +16,14 @@ namespace Empires.Game
         public Double resourceModifier;
         public Double startingPopulation;
 
+        public int universeCounter;
+        public int galaxyCounter;
+        public int solarSystemCounter;
+        public int bodyCounter;
+
         public List<Universe> universes;
         public List<Galaxy> galaxies;
-        public List<SolarSystem> solasSystems;
+        public List<SolarSystem> solarSystems;
         public List<Body> bodies;
     }
 }
