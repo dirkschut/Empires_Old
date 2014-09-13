@@ -16,7 +16,7 @@ namespace Empires.IO.Packages
 
             for (int i = 0; i < packageFiles.Length; i++)
             {
-                Console.WriteLine(packageFiles[i]);
+                packages[i] = new Package(packageFiles[i]);
             }
 
             return packages;

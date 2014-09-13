@@ -22,6 +22,10 @@ namespace Empires.forms
         private void PackageManager_Load(object sender, EventArgs e)
         {
             packages = Packages.GetPackages();
+            foreach (Package package in packages)
+            {
+                this.lb_Packages.Items.Add(package.getPath());
+            }
         }
     }
 }

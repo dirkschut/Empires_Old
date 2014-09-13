@@ -7,5 +7,16 @@ namespace Empires.IO.Packages
 {
     class Package
     {
+        private String path;
+
+        public Package(String path)
+        {
+            this.path = path;
+        }
+
+        public String getPath()
+        {
+            return this.path;
+        }
     }
 }
