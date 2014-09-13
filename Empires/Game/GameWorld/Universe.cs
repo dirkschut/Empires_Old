@@ -7,8 +7,6 @@ namespace Empires.Game.GameWorld
 {
     public class Universe
     {
-        public List<Galaxy> galaxies;
-
         public String name;
     }
 }

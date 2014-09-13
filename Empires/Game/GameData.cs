@@ -17,5 +17,8 @@ namespace Empires.Game
         public Double startingPopulation;
 
         public List<Universe> universes;
+        public List<Galaxy> galaxies;
+        public List<SolarSystem> solasSystems;
+        public List<Body> bodies;
     }
 }
