@@ -19,6 +19,15 @@ namespace Empires.forms
         {
             this.package = package;
             InitializeComponent();
+            loadData();
+        }
+
+        private void loadData()
+        {
+            this.tb_PackageName.Text = package.data.name;
+            this.tb_PackageAuthor.Text = package.data.author;
+            this.tb_PackageVersion.Text = package.data.version;
+            this.tb_PackageID.Text = package.data.packageID;
         }
 
         private void btn_SavePackage_Click(object sender, EventArgs e)
