@@ -15,5 +15,12 @@ namespace Empires.forms
         {
             InitializeComponent();
         }
+
+        private void NewGame_Load(object sender, EventArgs e)
+        {
+            this.tb_GameName.Text = "New Game";
+            this.tb_ResourceModifier.Text = "1.0";
+            this.tb_StartingPopulation.Text = "1000";
+        }
     }
 }

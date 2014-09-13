@@ -110,6 +110,7 @@
             this.MaximizeBox = false;
             this.Name = "NewGame";
             this.Text = "New Game";
+            this.Load += new System.EventHandler(this.NewGame_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
