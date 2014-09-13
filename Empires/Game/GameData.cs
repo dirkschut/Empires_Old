@@ -16,6 +16,6 @@ namespace Empires.Game
         public Double resourceModifier;
         public Double startingPopulation;
 
-        public Universe universe;
+        public List<Universe> universes;
     }
 }
