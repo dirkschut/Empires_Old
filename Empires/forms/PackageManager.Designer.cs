@@ -59,6 +59,7 @@
             this.btn_NewPackage.TabIndex = 1;
             this.btn_NewPackage.Text = "New Package";
             this.btn_NewPackage.UseVisualStyleBackColor = true;
+            this.btn_NewPackage.Click += new System.EventHandler(this.btn_NewPackage_Click);
             // 
             // btn_Delete
             // 

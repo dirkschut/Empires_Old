@@ -27,5 +27,10 @@ namespace Empires.forms
                 this.lb_Packages.Items.Add(package.getPath());
             }
         }
+
+        private void btn_NewPackage_Click(object sender, EventArgs e)
+        {
+            new EditPackage(new Package()).Show();
+        }
     }
 }

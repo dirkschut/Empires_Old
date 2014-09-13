@@ -20,5 +20,15 @@ namespace Empires.forms
             this.package = package;
             InitializeComponent();
         }
+
+        private void btn_SavePackage_Click(object sender, EventArgs e)
+        {
+            package.name = this.tb_PackageName.Text;
+            package.author = this.tb_PackageAuthor.Text;
+            package.version = this.tb_PackageVersion.Text;
+            package.packageID = this.tb_PackageID.Text;
+
+            package.save();
+        }
     }
 }

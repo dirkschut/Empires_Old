@@ -154,6 +154,7 @@
             this.btn_SavePackage.TabIndex = 1;
             this.btn_SavePackage.Text = "Save Package";
             this.btn_SavePackage.UseVisualStyleBackColor = true;
+            this.btn_SavePackage.Click += new System.EventHandler(this.btn_SavePackage_Click);
             // 
             // EditPackage
             // 
