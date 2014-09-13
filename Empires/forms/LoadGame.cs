@@ -36,5 +36,10 @@ namespace Empires.forms
                 lb_GameList.Items.Add(games[i].data.name);
             }
         }
+
+        private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+            refresh();
+        }
     }
 }
