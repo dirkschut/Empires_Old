@@ -65,6 +65,7 @@
       <DependentUpon>PackageManager.cs</DependentUpon>
     </Compile>
     <Compile Include="IO\Packages\Package.cs" />
+    <Compile Include="IO\Packages\PackageData.cs" />
     <Compile Include="IO\Packages\Packages.cs" />
     <Compile Include="Lib\Finals.cs" />
     <Compile Include="Program.cs" />

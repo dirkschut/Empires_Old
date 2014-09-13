@@ -11,14 +11,12 @@ namespace Empires.IO.Packages
     {
         private String path;
 
-        public String name;
-        public String author;
-        public String version;
-        public String packageID;
+        public PackageData data;
 
         public Package(String path)
         {
             this.path = path;
+            load();
         }
 
         public Package()
@@ -31,13 +29,23 @@ namespace Empires.IO.Packages
             return this.path;
         }
 
+        public void load()
+        {
+            using (StreamReader sr = File.OpenText(path))
+            {
+                String json = "";
+                json = sr.ReadLine();
+                data = JsonConvert.DeserializeObject<PackageData>(json);
+            }
+        }
+
         public void save()
         {
-            String json = JsonConvert.SerializeObject(this);
+            String json = JsonConvert.SerializeObject(data);
 
             if (path == "")
             {
-                path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Empires\\packages\\" + name + ".epkg";
+                path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Empires\\packages\\" + data.name + ".epkg";
             }
 
             if (File.Exists(path))
