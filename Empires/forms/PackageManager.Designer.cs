@@ -51,6 +51,7 @@
             this.lb_Packages.Name = "lb_Packages";
             this.lb_Packages.Size = new System.Drawing.Size(217, 472);
             this.lb_Packages.TabIndex = 0;
+            this.lb_Packages.SelectedIndexChanged += new System.EventHandler(this.lb_Packages_SelectedIndexChanged);
             // 
             // btn_NewPackage
             // 

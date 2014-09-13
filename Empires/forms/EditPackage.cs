@@ -23,6 +23,8 @@ namespace Empires.forms
 
         private void btn_SavePackage_Click(object sender, EventArgs e)
         {
+            String name = this.tb_PackageAuthor.Text;
+
             package.data.name = this.tb_PackageName.Text;
             package.data.author = this.tb_PackageAuthor.Text;
             package.data.version = this.tb_PackageVersion.Text;

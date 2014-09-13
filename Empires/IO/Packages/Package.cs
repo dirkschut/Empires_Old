@@ -11,7 +11,7 @@ namespace Empires.IO.Packages
     {
         private String path;
 
-        public PackageData data;
+        public PackageData data = new PackageData();
 
         public Package(String path)
         {

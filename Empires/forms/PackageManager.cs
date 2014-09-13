@@ -22,6 +22,7 @@ namespace Empires.forms
         private void PackageManager_Load(object sender, EventArgs e)
         {
             refresh();
+            loadPackageData(0);
         }
 
         private void btn_NewPackage_Click(object sender, EventArgs e)
@@ -42,6 +43,22 @@ namespace Empires.forms
             {
                 this.lb_Packages.Items.Add(package.data.name);
             }
+        }
+
+        private void loadPackageData(int packageID)
+        {
+            if (packageID <= packages.Length)
+            {
+                this.lbl_PackageNameValue.Text = packages[packageID].data.name;
+                this.lbl_PackageAuthorValue.Text = packages[packageID].data.author;
+                this.lbl_PackageVersionValue.Text = packages[packageID].data.version;
+                this.lbl_PackageIDValue.Text = packages[packageID].data.packageID;
+            }
+        }
+
+        private void lb_Packages_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            loadPackageData(lb_Packages.SelectedIndex);
         }
     }
 }
