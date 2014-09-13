@@ -8,11 +8,15 @@ using System.Text;
 using System.Windows.Forms;
 
 using Empires.Game;
+using Empires.IO.Packages;
 
 namespace Empires.forms
 {
     public partial class NewGame : Form
     {
+        private Package[] packages;
+        private Boolean[] packagesIn;
+
         public NewGame()
         {
             InitializeComponent();
@@ -20,9 +24,42 @@ namespace Empires.forms
 
         private void NewGame_Load(object sender, EventArgs e)
         {
+            refresh();
+
             this.tb_GameName.Text = "New Game";
             this.tb_ResourceModifier.Text = "1.0";
             this.tb_StartingPopulation.Text = "1000";
+        }
+
+        private void refresh()
+        {
+            packages = Packages.GetPackages();
+            if (packagesIn != null)
+            {
+                if (packages.Length != packagesIn.Length)
+                {
+                    packagesIn = new Boolean[packages.Length];
+                }
+            }
+            else
+            {
+                packagesIn = new Boolean[packages.Length];
+            }
+
+            lb_PackagesIn.Items.Clear();
+            lb_PackagesNotIn.Items.Clear();
+
+            for (int i = 0; i < packages.Length; i++)
+            {
+                if (packagesIn[i])
+                {
+                    lb_PackagesIn.Items.Add(packages[i].data.name);
+                }
+                else
+                {
+                    lb_PackagesNotIn.Items.Add(packages[i].data.name);
+                }
+            }
         }
 
         private void btn_CreateGame_Click(object sender, EventArgs e)
@@ -50,6 +87,53 @@ namespace Empires.forms
 
             game.save();
             this.Close();
+        }
+
+        private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+            refresh();
+        }
+
+        private void btn_AddPackage_Click(object sender, EventArgs e)
+        {
+            if (lb_PackagesNotIn.SelectedIndex >= 0)
+            {
+                int counter = 0;
+                for (int i = 0; i < packages.Length; i++)
+                {
+                    if (!packagesIn[i])
+                    {
+                        if (counter == lb_PackagesNotIn.SelectedIndex)
+                        {
+                            packagesIn[i] = true;
+                            break;
+                        }
+                        counter++;
+                    }
+                }
+            }
+            refresh();
+        }
+
+        private void btn_RemovePackage_Click(object sender, EventArgs e)
+        {
+            if (lb_PackagesIn.SelectedIndex >= 0)
+            {
+                int counter = 0;
+                for (int i = 0; i < packages.Length; i++)
+                {
+                    if (packagesIn[i])
+                    {
+                        if (counter == lb_PackagesIn.SelectedIndex)
+                        {
+                            packagesIn[i] = false;
+                            break;
+                        }
+                        counter++;
+                    }
+                }
+            }
+            refresh();
         }
     }
 }
