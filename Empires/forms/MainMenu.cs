@@ -26,5 +26,10 @@ namespace Empires.forms
         {
             new PackageManager().Show();
         }
+
+        private void btn_NewGame_Click(object sender, EventArgs e)
+        {
+            new NewGame().Show();
+        }
     }
 }
