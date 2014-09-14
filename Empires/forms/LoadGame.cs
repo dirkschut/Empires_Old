@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Empires.Lib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,6 +41,16 @@ namespace Empires.forms
         private void btn_Refresh_Click(object sender, EventArgs e)
         {
             refresh();
+        }
+
+        private void btn_LoadGame_Click(object sender, EventArgs e)
+        {
+            if (lb_GameList.SelectedIndex >= 0)
+            {
+                Objects.game = games[lb_GameList.SelectedIndex];
+                new GameMenu().Show();
+                this.Close();
+            }
         }
     }
 }
