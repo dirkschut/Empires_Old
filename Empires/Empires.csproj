@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="forms\BodiesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\BodiesList.Designer.cs">
+      <DependentUpon>BodiesList.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\EditPackage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     <Compile Include="Lib\Objects.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="forms\BodiesList.resx">
+      <DependentUpon>BodiesList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\EditPackage.resx">
       <DependentUpon>EditPackage.cs</DependentUpon>
     </EmbeddedResource>

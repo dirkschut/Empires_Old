@@ -36,5 +36,10 @@ namespace Empires.forms
         {
             new SolarSystemList().Show();
         }
+
+        private void bodiesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new BodiesList().Show();
+        }
     }
 }

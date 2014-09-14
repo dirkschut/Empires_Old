@@ -86,6 +86,7 @@
             this.bodiesToolStripMenuItem.Name = "bodiesToolStripMenuItem";
             this.bodiesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bodiesToolStripMenuItem.Text = "Bodies";
+            this.bodiesToolStripMenuItem.Click += new System.EventHandler(this.bodiesToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
