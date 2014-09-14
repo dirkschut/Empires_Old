@@ -28,7 +28,7 @@ namespace Empires.Game
 
         public void save()
         {
-            String json = JsonConvert.SerializeObject(data);
+            String json = JsonConvert.SerializeObject(data, Formatting.Indented);
 
             if (path == "")
             {
