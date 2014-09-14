@@ -31,5 +31,10 @@ namespace Empires.forms
         {
             new GalaxyList().Show();
         }
+
+        private void solarSystemsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new SolarSystemList().Show();
+        }
     }
 }

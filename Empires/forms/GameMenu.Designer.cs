@@ -79,6 +79,7 @@
             this.solarSystemsToolStripMenuItem.Name = "solarSystemsToolStripMenuItem";
             this.solarSystemsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.solarSystemsToolStripMenuItem.Text = "Solar Systems";
+            this.solarSystemsToolStripMenuItem.Click += new System.EventHandler(this.solarSystemsToolStripMenuItem_Click);
             // 
             // bodiesToolStripMenuItem
             // 
