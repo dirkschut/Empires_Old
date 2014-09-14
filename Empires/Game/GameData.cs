@@ -15,7 +15,7 @@ namespace Empires.Game
         public Package[] packages;
 
         [JsonIgnore]
-        public Package package;
+        public Package package = new Package();
 
         public Double resourceModifier;
         public Double startingPopulation;

@@ -28,6 +28,7 @@ namespace Empires.Game.GameWorld
             this.ID = Objects.game.data.galaxyCounter;
             Objects.game.data.galaxyCounter++;
             this.universe = universe;
+            this.name = Objects.game.data.package.getRandomObjectName();
 
             Random rand = new Random();
             

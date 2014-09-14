@@ -58,6 +58,11 @@ namespace Empires.Game
                 data = JsonConvert.DeserializeObject<GameData>(json);
             }
 
+            onePackage();
+        }
+
+        public void onePackage()
+        {
             data.package = new Package();
             foreach (Package package in data.packages)
             {

@@ -17,6 +17,7 @@ namespace Empires.Game.GameWorld
         {
             ID = Objects.game.data.universeCounter;
             Objects.game.data.universeCounter++;
+            name = Objects.game.data.package.getRandomObjectName();
 
             Objects.game.data.galaxies.Add(new Galaxy(true, ID));
 

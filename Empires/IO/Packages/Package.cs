@@ -59,5 +59,17 @@ namespace Empires.IO.Packages
                 fs.Write(info, 0, info.Length);
             }
         }
+
+        public String getRandomObjectName()
+        {
+            if (data.objectNames.Count > 0)
+            {
+                return data.objectNames[new Random().Next(data.objectNames.Count)];
+            }
+            else
+            {
+                return "";
+            }
+        }
     }
 }

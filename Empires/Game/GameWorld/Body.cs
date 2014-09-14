@@ -30,6 +30,8 @@ namespace Empires.Game.GameWorld
             this.ID = Objects.game.data.bodyCounter;
             Objects.game.data.bodyCounter++;
             this.type = type;
+            this.name = Objects.game.data.package.getRandomObjectName();
+            this.solarSystem = solarSystem;
 
             Random rand = new Random();
 

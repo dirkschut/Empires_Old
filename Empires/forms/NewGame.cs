@@ -111,6 +111,7 @@ namespace Empires.forms
             game.data.packages = packagesToUse;
 
             Objects.game = game;
+            Objects.game.onePackage();
             Objects.game.generate();
             Objects.game.save();
             Objects.game = null;

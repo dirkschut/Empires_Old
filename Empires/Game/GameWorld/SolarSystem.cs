@@ -23,6 +23,7 @@ namespace Empires.Game.GameWorld
             this.ID = Objects.game.data.solarSystemCounter;
             Objects.game.data.solarSystemCounter++;
             this.galaxy = galaxy;
+            this.name = Objects.game.data.package.getRandomObjectName();
 
             Random rand = new Random();
             distanceFromCentre = rand.Next(10, 1000000);
