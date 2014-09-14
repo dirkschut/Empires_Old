@@ -34,7 +34,7 @@ namespace Empires.IO.Packages
             using (StreamReader sr = File.OpenText(path))
             {
                 String json = "";
-                json = sr.ReadLine();
+                json = sr.ReadToEnd();
                 data = JsonConvert.DeserializeObject<PackageData>(json);
             }
         }

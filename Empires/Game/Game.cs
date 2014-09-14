@@ -1,4 +1,6 @@
 ﻿using Empires.Game.GameWorld;
+using Empires.IO.Packages;
+using Empires.IO.Packages.Objects;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -52,8 +54,22 @@ namespace Empires.Game
             using (StreamReader sr = File.OpenText(path))
             {
                 String json = "";
-                json = sr.ReadLine();
+                json = sr.ReadToEnd();
                 data = JsonConvert.DeserializeObject<GameData>(json);
+            }
+
+            data.package = new Package();
+            foreach (Package package in data.packages)
+            {
+                foreach (Material material in package.data.materials)
+                {
+                    data.package.data.materials.Add(material);
+                }
+
+                foreach (String objectName in package.data.objectNames)
+                {
+                    data.package.data.objectNames.Add(objectName);
+                }
             }
         }
 

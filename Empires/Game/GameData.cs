@@ -1,5 +1,6 @@
 ﻿using Empires.Game.GameWorld;
 using Empires.IO.Packages;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,9 @@ namespace Empires.Game
         public String name;
 
         public Package[] packages;
+
+        [JsonIgnore]
+        public Package package;
 
         public Double resourceModifier;
         public Double startingPopulation;
