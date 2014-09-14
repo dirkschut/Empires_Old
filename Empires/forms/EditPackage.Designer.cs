@@ -53,16 +53,25 @@
             this.lbl_GenerateInStarsAmount = new System.Windows.Forms.Label();
             this.lbl_MaterialName = new System.Windows.Forms.Label();
             this.lb_Materials = new System.Windows.Forms.ListBox();
+            this.tp_ObjectNames = new System.Windows.Forms.TabPage();
+            this.btn_NewObjectName = new System.Windows.Forms.Button();
+            this.btn_SaveObjectName = new System.Windows.Forms.Button();
+            this.btn_DeleteObjectName = new System.Windows.Forms.Button();
+            this.tb_ObjectName = new System.Windows.Forms.TextBox();
+            this.lbl_ObjectName = new System.Windows.Forms.Label();
+            this.lb_ObjectNames = new System.Windows.Forms.ListBox();
             this.btn_SavePackage = new System.Windows.Forms.Button();
             this.tc_PackageEditor.SuspendLayout();
             this.tp_PackageDetails.SuspendLayout();
             this.tp_Materials.SuspendLayout();
+            this.tp_ObjectNames.SuspendLayout();
             this.SuspendLayout();
             // 
             // tc_PackageEditor
             // 
             this.tc_PackageEditor.Controls.Add(this.tp_PackageDetails);
             this.tc_PackageEditor.Controls.Add(this.tp_Materials);
+            this.tc_PackageEditor.Controls.Add(this.tp_ObjectNames);
             this.tc_PackageEditor.Location = new System.Drawing.Point(13, 13);
             this.tc_PackageEditor.Name = "tc_PackageEditor";
             this.tc_PackageEditor.SelectedIndex = 0;
@@ -294,6 +303,76 @@
             this.lb_Materials.TabIndex = 0;
             this.lb_Materials.SelectedIndexChanged += new System.EventHandler(this.lb_Materials_SelectedIndexChanged);
             // 
+            // tp_ObjectNames
+            // 
+            this.tp_ObjectNames.Controls.Add(this.btn_NewObjectName);
+            this.tp_ObjectNames.Controls.Add(this.btn_SaveObjectName);
+            this.tp_ObjectNames.Controls.Add(this.btn_DeleteObjectName);
+            this.tp_ObjectNames.Controls.Add(this.tb_ObjectName);
+            this.tp_ObjectNames.Controls.Add(this.lbl_ObjectName);
+            this.tp_ObjectNames.Controls.Add(this.lb_ObjectNames);
+            this.tp_ObjectNames.Location = new System.Drawing.Point(4, 22);
+            this.tp_ObjectNames.Name = "tp_ObjectNames";
+            this.tp_ObjectNames.Size = new System.Drawing.Size(751, 481);
+            this.tp_ObjectNames.TabIndex = 2;
+            this.tp_ObjectNames.Text = "Object Names";
+            this.tp_ObjectNames.UseVisualStyleBackColor = true;
+            // 
+            // btn_NewObjectName
+            // 
+            this.btn_NewObjectName.Location = new System.Drawing.Point(6, 452);
+            this.btn_NewObjectName.Name = "btn_NewObjectName";
+            this.btn_NewObjectName.Size = new System.Drawing.Size(214, 23);
+            this.btn_NewObjectName.TabIndex = 21;
+            this.btn_NewObjectName.Text = "New Object Name";
+            this.btn_NewObjectName.UseVisualStyleBackColor = true;
+            this.btn_NewObjectName.Click += new System.EventHandler(this.btn_NewObjectName_Click);
+            // 
+            // btn_SaveObjectName
+            // 
+            this.btn_SaveObjectName.Location = new System.Drawing.Point(492, 452);
+            this.btn_SaveObjectName.Name = "btn_SaveObjectName";
+            this.btn_SaveObjectName.Size = new System.Drawing.Size(252, 23);
+            this.btn_SaveObjectName.TabIndex = 20;
+            this.btn_SaveObjectName.Text = "Save Object Name";
+            this.btn_SaveObjectName.UseVisualStyleBackColor = true;
+            this.btn_SaveObjectName.Click += new System.EventHandler(this.btn_SaveObjectName_Click);
+            // 
+            // btn_DeleteObjectName
+            // 
+            this.btn_DeleteObjectName.Location = new System.Drawing.Point(227, 452);
+            this.btn_DeleteObjectName.Name = "btn_DeleteObjectName";
+            this.btn_DeleteObjectName.Size = new System.Drawing.Size(258, 23);
+            this.btn_DeleteObjectName.TabIndex = 19;
+            this.btn_DeleteObjectName.Text = "Delete Object Name";
+            this.btn_DeleteObjectName.UseVisualStyleBackColor = true;
+            this.btn_DeleteObjectName.Click += new System.EventHandler(this.btn_DeleteObjectName_Click);
+            // 
+            // tb_ObjectName
+            // 
+            this.tb_ObjectName.Location = new System.Drawing.Point(372, 6);
+            this.tb_ObjectName.Name = "tb_ObjectName";
+            this.tb_ObjectName.Size = new System.Drawing.Size(372, 20);
+            this.tb_ObjectName.TabIndex = 18;
+            // 
+            // lbl_ObjectName
+            // 
+            this.lbl_ObjectName.AutoSize = true;
+            this.lbl_ObjectName.Location = new System.Drawing.Point(226, 9);
+            this.lbl_ObjectName.Name = "lbl_ObjectName";
+            this.lbl_ObjectName.Size = new System.Drawing.Size(69, 13);
+            this.lbl_ObjectName.TabIndex = 17;
+            this.lbl_ObjectName.Text = "Object Name";
+            // 
+            // lb_ObjectNames
+            // 
+            this.lb_ObjectNames.FormattingEnabled = true;
+            this.lb_ObjectNames.Location = new System.Drawing.Point(6, 7);
+            this.lb_ObjectNames.Name = "lb_ObjectNames";
+            this.lb_ObjectNames.Size = new System.Drawing.Size(214, 446);
+            this.lb_ObjectNames.TabIndex = 16;
+            this.lb_ObjectNames.SelectedIndexChanged += new System.EventHandler(this.lb_ObjectNames_SelectedIndexChanged);
+            // 
             // btn_SavePackage
             // 
             this.btn_SavePackage.Location = new System.Drawing.Point(13, 526);
@@ -320,6 +399,8 @@
             this.tp_PackageDetails.PerformLayout();
             this.tp_Materials.ResumeLayout(false);
             this.tp_Materials.PerformLayout();
+            this.tp_ObjectNames.ResumeLayout(false);
+            this.tp_ObjectNames.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -352,5 +433,12 @@
         private System.Windows.Forms.Button btn_NewMaterial;
         private System.Windows.Forms.Button btn_SaveMaterial;
         private System.Windows.Forms.Button btn_DeleteMaterial;
+        private System.Windows.Forms.TabPage tp_ObjectNames;
+        private System.Windows.Forms.Button btn_NewObjectName;
+        private System.Windows.Forms.Button btn_SaveObjectName;
+        private System.Windows.Forms.Button btn_DeleteObjectName;
+        private System.Windows.Forms.TextBox tb_ObjectName;
+        private System.Windows.Forms.Label lbl_ObjectName;
+        private System.Windows.Forms.ListBox lb_ObjectNames;
     }
 }

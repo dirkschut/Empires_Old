@@ -112,7 +112,6 @@
     <Compile Include="forms\PackageManager.Designer.cs">
       <DependentUpon>PackageManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="IO\Names.cs" />
     <Compile Include="IO\Packages\Objects\Material.cs" />
     <Compile Include="IO\Packages\Package.cs" />
     <Compile Include="IO\Packages\PackageData.cs" />
@@ -173,9 +172,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Game\GameData.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="names.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

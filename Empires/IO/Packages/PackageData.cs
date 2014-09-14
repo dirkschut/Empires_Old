@@ -13,6 +13,8 @@ namespace Empires.IO.Packages
         public String version;
         public String packageID;
 
+        public List<String> objectNames = new List<String>();
+
         public List<Material> materials = new List<Material>();
     }
 }
