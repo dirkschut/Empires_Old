@@ -65,6 +65,7 @@
             this.universesToolStripMenuItem.Name = "universesToolStripMenuItem";
             this.universesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.universesToolStripMenuItem.Text = "Universes";
+            this.universesToolStripMenuItem.Click += new System.EventHandler(this.universesToolStripMenuItem_Click);
             // 
             // galaxiesToolStripMenuItem
             // 

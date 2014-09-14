@@ -69,6 +69,12 @@
     <Compile Include="forms\NewGame.Designer.cs">
       <DependentUpon>NewGame.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\UniverseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\UniverseList.Designer.cs">
+      <DependentUpon>UniverseList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Game\Game.cs" />
     <Compile Include="Game\GameWorld\Body.cs" />
     <Compile Include="Game\GameWorld\Galaxy.cs" />
@@ -92,6 +98,7 @@
     <Compile Include="IO\Packages\Package.cs" />
     <Compile Include="IO\Packages\PackageData.cs" />
     <Compile Include="IO\Packages\Packages.cs" />
+    <Compile Include="Lib\Calc.cs" />
     <Compile Include="Lib\Finals.cs" />
     <Compile Include="Lib\Objects.cs" />
     <Compile Include="Program.cs" />
@@ -113,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\PackageManager.resx">
       <DependentUpon>PackageManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\UniverseList.resx">
+      <DependentUpon>UniverseList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

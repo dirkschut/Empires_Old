@@ -21,5 +21,10 @@ namespace Empires.forms
         {
             Objects.game.save();
         }
+
+        private void universesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new UniverseList().Show();
+        }
     }
 }
