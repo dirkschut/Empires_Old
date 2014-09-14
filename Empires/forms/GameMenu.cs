@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Empires.Lib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,11 @@ namespace Empires.forms
         public GameMenu()
         {
             InitializeComponent();
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Objects.game.save();
         }
     }
 }

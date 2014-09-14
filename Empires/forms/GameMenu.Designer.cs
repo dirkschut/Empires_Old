@@ -34,16 +34,18 @@
             this.galaxiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.solarSystemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bodiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ms_Menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // ms_Menu
             // 
             this.ms_Menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.multiverseToolStripMenuItem});
+            this.multiverseToolStripMenuItem,
+            this.saveToolStripMenuItem});
             this.ms_Menu.Location = new System.Drawing.Point(0, 0);
             this.ms_Menu.Name = "ms_Menu";
-            this.ms_Menu.Size = new System.Drawing.Size(124, 24);
+            this.ms_Menu.Size = new System.Drawing.Size(128, 24);
             this.ms_Menu.TabIndex = 0;
             this.ms_Menu.Text = "menuStrip1";
             // 
@@ -82,11 +84,18 @@
             this.bodiesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bodiesToolStripMenuItem.Text = "Bodies";
             // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
             // GameMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(124, 25);
+            this.ClientSize = new System.Drawing.Size(128, 25);
             this.Controls.Add(this.ms_Menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -107,6 +116,7 @@
         private System.Windows.Forms.ToolStripMenuItem galaxiesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem solarSystemsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bodiesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
 
     }
 }
