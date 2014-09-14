@@ -72,6 +72,7 @@
             this.galaxiesToolStripMenuItem.Name = "galaxiesToolStripMenuItem";
             this.galaxiesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.galaxiesToolStripMenuItem.Text = "Galaxies";
+            this.galaxiesToolStripMenuItem.Click += new System.EventHandler(this.galaxiesToolStripMenuItem_Click);
             // 
             // solarSystemsToolStripMenuItem
             // 

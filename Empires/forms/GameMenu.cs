@@ -26,5 +26,10 @@ namespace Empires.forms
         {
             new UniverseList().Show();
         }
+
+        private void galaxiesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new GalaxyList().Show();
+        }
     }
 }
