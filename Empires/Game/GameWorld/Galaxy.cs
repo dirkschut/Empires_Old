@@ -10,9 +10,9 @@ namespace Empires.Game.GameWorld
     {
         public String name;
 
-        public int x;
-        public int y;
-        public int z;
+        public Double x;
+        public Double y;
+        public Double z;
 
         public int ID;
         public int universe;
@@ -26,9 +26,10 @@ namespace Empires.Game.GameWorld
             this.universe = universe;
 
             Random rand = new Random();
-            this.x = rand.Next(-10000, 10000);
-            this.y = rand.Next(-10000, 10000);
-            this.z = rand.Next(-10000, 10000);
+            
+            this.x = Calc.genMod() * Finals.UNIVERSE_SIZE;
+            this.y = Calc.genMod() * Finals.UNIVERSE_SIZE;
+            this.z = Calc.genMod() * Finals.UNIVERSE_SIZE;
 
             if (generate)
             {

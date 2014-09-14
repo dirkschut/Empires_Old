@@ -12,6 +12,7 @@ namespace Empires.Lib
 
         public const int MIN_GALAXIES = 10000;
         public const int MAX_GALAXIES = 100000;
+        public const int UNIVERSE_SIZE = 10000;
 
         public const int MIN_SOLARSYSTEMS = 10000;
         public const int MAX_SOLARSYSTEMS = 100000;
