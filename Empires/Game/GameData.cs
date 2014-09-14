@@ -21,10 +21,10 @@ namespace Empires.Game
         public int solarSystemCounter;
         public int bodyCounter;
 
-        public List<Universe> universes;
-        public List<Galaxy> galaxies;
-        public List<SolarSystem> solarSystems;
-        public List<Body> bodies;
-        public List<Zone> zones;
+        public List<Universe> universes = new List<Universe>();
+        public List<Galaxy> galaxies = new List<Galaxy>();
+        public List<SolarSystem> solarSystems = new List<SolarSystem>();
+        public List<Body> bodies = new List<Body>();
+        public List<Zone> zones = new List<Zone>();
     }
 }

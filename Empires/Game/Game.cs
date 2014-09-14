@@ -22,8 +22,8 @@ namespace Empires.Game
 
         public Game(String path)
         {
+            data = new GameData();
             this.path = path;
-            load();
         }
 
         public void save()

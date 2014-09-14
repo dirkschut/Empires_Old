@@ -13,7 +13,7 @@ namespace Empires.forms
 {
     public partial class LoadGame : Form
     {
-        Game.Game[] games;
+        String[] games;
 
         public LoadGame()
         {
@@ -28,13 +28,14 @@ namespace Empires.forms
         private void refresh()
         {
             String[] gameFiles = Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Empires\\saves\\", "*.esav");
-            games = new Game.Game[gameFiles.Length];
+            games = new String[gameFiles.Length];
             lb_GameList.Items.Clear();
 
             for (int i = 0; i < gameFiles.Length; i++)
             {
-                games[i] = new Game.Game(gameFiles[i]);
-                lb_GameList.Items.Add(games[i].data.name);
+                String[] pathParts = gameFiles[i].Split('\\');
+                games[i] = pathParts[pathParts.Length - 1];
+                lb_GameList.Items.Add(games[i]);
             }
         }
 
@@ -47,7 +48,8 @@ namespace Empires.forms
         {
             if (lb_GameList.SelectedIndex >= 0)
             {
-                Objects.game = games[lb_GameList.SelectedIndex];
+                Objects.game = new Game.Game(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Empires\\saves\\" + games[lb_GameList.SelectedIndex]);
+                Objects.game.load();
                 new GameMenu().Show();
                 this.Close();
             }
