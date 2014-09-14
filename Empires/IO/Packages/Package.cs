@@ -13,6 +13,8 @@ namespace Empires.IO.Packages
 
         public PackageData data = new PackageData();
 
+        public static Random rand = new Random();
+
         public Package(String path)
         {
             this.path = path;
@@ -64,7 +66,7 @@ namespace Empires.IO.Packages
         {
             if (data.objectNames.Count > 0)
             {
-                return data.objectNames[new Random().Next(data.objectNames.Count)];
+                return data.objectNames[rand.Next(0, data.objectNames.Count)];
             }
             else
             {
