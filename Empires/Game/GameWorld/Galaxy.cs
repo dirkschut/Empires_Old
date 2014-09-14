@@ -14,6 +14,10 @@ namespace Empires.Game.GameWorld
         public Double y;
         public Double z;
 
+        public Double xSpeed;
+        public Double ySpeed;
+        public Double zSpeed;
+
         public int ID;
         public int universe;
 
@@ -30,6 +34,10 @@ namespace Empires.Game.GameWorld
             this.x = Calc.genMod() * Finals.UNIVERSE_SIZE;
             this.y = Calc.genMod() * Finals.UNIVERSE_SIZE;
             this.z = Calc.genMod() * Finals.UNIVERSE_SIZE;
+
+            this.xSpeed = Calc.genMod() * Finals.UNIVERSE_SPEED;
+            this.ySpeed = Calc.genMod() * Finals.UNIVERSE_SPEED;
+            this.zSpeed = Calc.genMod() * Finals.UNIVERSE_SPEED;
 
             if (generate)
             {
