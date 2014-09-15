@@ -53,6 +53,8 @@ namespace Empires.forms
 
                 System.Drawing.SolidBrush blackBrush = new System.Drawing.SolidBrush(System.Drawing.Color.Black);
                 System.Drawing.SolidBrush greenBrush = new SolidBrush(System.Drawing.Color.Green);
+                Pen greenPen = new Pen(Color.Green);
+
                 System.Drawing.Graphics formGraphics;
                 formGraphics = this.CreateGraphics();
 
@@ -71,6 +73,11 @@ namespace Empires.forms
                         if (cb_GalaxyNames.Checked)
                         {
                             formGraphics.DrawString(galaxy.ID + " - " + galaxy.name, font, greenBrush, drawAtX, drawAtY);
+                        }
+
+                        if (cb_GalaxyPaths.Checked)
+                        {
+                            formGraphics.DrawLine(greenPen, new Point(drawAtX, drawAtY), new Point(drawAtX + (int)galaxy.xSpeed * 3, drawAtY + (int)galaxy.ySpeed * 3));
                         }
                     }
                     else
@@ -133,6 +140,11 @@ namespace Empires.forms
         }
 
         private void cb_GalaxyNames_CheckedChanged(object sender, EventArgs e)
+        {
+            drawUniverse();
+        }
+
+        private void cb_GalaxyPaths_CheckedChanged(object sender, EventArgs e)
         {
             drawUniverse();
         }

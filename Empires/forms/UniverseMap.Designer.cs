@@ -40,6 +40,7 @@
             this.tc_Controls = new System.Windows.Forms.TabControl();
             this.tp_Controls = new System.Windows.Forms.TabPage();
             this.cb_GalaxyNames = new System.Windows.Forms.CheckBox();
+            this.cb_GalaxyPaths = new System.Windows.Forms.CheckBox();
             this.tc_Controls.SuspendLayout();
             this.tp_Controls.SuspendLayout();
             this.SuspendLayout();
@@ -139,11 +140,12 @@
             this.tc_Controls.Location = new System.Drawing.Point(12, 12);
             this.tc_Controls.Name = "tc_Controls";
             this.tc_Controls.SelectedIndex = 0;
-            this.tc_Controls.Size = new System.Drawing.Size(181, 278);
+            this.tc_Controls.Size = new System.Drawing.Size(181, 310);
             this.tc_Controls.TabIndex = 9;
             // 
             // tp_Controls
             // 
+            this.tp_Controls.Controls.Add(this.cb_GalaxyPaths);
             this.tp_Controls.Controls.Add(this.cb_GalaxyNames);
             this.tp_Controls.Controls.Add(this.cb_Universe);
             this.tp_Controls.Controls.Add(this.btn_Reset);
@@ -157,7 +159,7 @@
             this.tp_Controls.Location = new System.Drawing.Point(4, 22);
             this.tp_Controls.Name = "tp_Controls";
             this.tp_Controls.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_Controls.Size = new System.Drawing.Size(173, 252);
+            this.tp_Controls.Size = new System.Drawing.Size(173, 284);
             this.tp_Controls.TabIndex = 0;
             this.tp_Controls.Text = "Map Controls";
             this.tp_Controls.UseVisualStyleBackColor = true;
@@ -172,6 +174,17 @@
             this.cb_GalaxyNames.Text = "Galaxy Names";
             this.cb_GalaxyNames.UseVisualStyleBackColor = true;
             this.cb_GalaxyNames.CheckedChanged += new System.EventHandler(this.cb_GalaxyNames_CheckedChanged);
+            // 
+            // cb_GalaxyPaths
+            // 
+            this.cb_GalaxyPaths.AutoSize = true;
+            this.cb_GalaxyPaths.Location = new System.Drawing.Point(7, 253);
+            this.cb_GalaxyPaths.Name = "cb_GalaxyPaths";
+            this.cb_GalaxyPaths.Size = new System.Drawing.Size(88, 17);
+            this.cb_GalaxyPaths.TabIndex = 10;
+            this.cb_GalaxyPaths.Text = "Galaxy Paths";
+            this.cb_GalaxyPaths.UseVisualStyleBackColor = true;
+            this.cb_GalaxyPaths.CheckedChanged += new System.EventHandler(this.cb_GalaxyPaths_CheckedChanged);
             // 
             // UniverseMap
             // 
@@ -203,5 +216,6 @@
         private System.Windows.Forms.TabControl tc_Controls;
         private System.Windows.Forms.TabPage tp_Controls;
         private System.Windows.Forms.CheckBox cb_GalaxyNames;
+        private System.Windows.Forms.CheckBox cb_GalaxyPaths;
     }
 }
