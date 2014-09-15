@@ -37,12 +37,16 @@
             this.btn_MoveUp = new System.Windows.Forms.Button();
             this.btn_ZoomIn = new System.Windows.Forms.Button();
             this.btn_Reset = new System.Windows.Forms.Button();
+            this.tc_Controls = new System.Windows.Forms.TabControl();
+            this.tp_Controls = new System.Windows.Forms.TabPage();
+            this.tc_Controls.SuspendLayout();
+            this.tp_Controls.SuspendLayout();
             this.SuspendLayout();
             // 
             // cb_Universe
             // 
             this.cb_Universe.FormattingEnabled = true;
-            this.cb_Universe.Location = new System.Drawing.Point(13, 13);
+            this.cb_Universe.Location = new System.Drawing.Point(6, 7);
             this.cb_Universe.Name = "cb_Universe";
             this.cb_Universe.Size = new System.Drawing.Size(162, 21);
             this.cb_Universe.TabIndex = 0;
@@ -50,7 +54,7 @@
             // 
             // btn_Refresh
             // 
-            this.btn_Refresh.Location = new System.Drawing.Point(13, 40);
+            this.btn_Refresh.Location = new System.Drawing.Point(6, 34);
             this.btn_Refresh.Name = "btn_Refresh";
             this.btn_Refresh.Size = new System.Drawing.Size(162, 23);
             this.btn_Refresh.TabIndex = 1;
@@ -60,7 +64,7 @@
             // 
             // btn_MoveDown
             // 
-            this.btn_MoveDown.Location = new System.Drawing.Point(69, 181);
+            this.btn_MoveDown.Location = new System.Drawing.Point(62, 175);
             this.btn_MoveDown.Name = "btn_MoveDown";
             this.btn_MoveDown.Size = new System.Drawing.Size(50, 50);
             this.btn_MoveDown.TabIndex = 2;
@@ -70,7 +74,7 @@
             // 
             // btn_MoveLeft
             // 
-            this.btn_MoveLeft.Location = new System.Drawing.Point(13, 125);
+            this.btn_MoveLeft.Location = new System.Drawing.Point(6, 119);
             this.btn_MoveLeft.Name = "btn_MoveLeft";
             this.btn_MoveLeft.Size = new System.Drawing.Size(50, 50);
             this.btn_MoveLeft.TabIndex = 3;
@@ -80,7 +84,7 @@
             // 
             // btn_MoveRight
             // 
-            this.btn_MoveRight.Location = new System.Drawing.Point(125, 125);
+            this.btn_MoveRight.Location = new System.Drawing.Point(118, 119);
             this.btn_MoveRight.Name = "btn_MoveRight";
             this.btn_MoveRight.Size = new System.Drawing.Size(50, 50);
             this.btn_MoveRight.TabIndex = 4;
@@ -90,7 +94,7 @@
             // 
             // btn_ZoomOut
             // 
-            this.btn_ZoomOut.Location = new System.Drawing.Point(125, 69);
+            this.btn_ZoomOut.Location = new System.Drawing.Point(118, 63);
             this.btn_ZoomOut.Name = "btn_ZoomOut";
             this.btn_ZoomOut.Size = new System.Drawing.Size(50, 50);
             this.btn_ZoomOut.TabIndex = 5;
@@ -100,7 +104,7 @@
             // 
             // btn_MoveUp
             // 
-            this.btn_MoveUp.Location = new System.Drawing.Point(69, 69);
+            this.btn_MoveUp.Location = new System.Drawing.Point(62, 63);
             this.btn_MoveUp.Name = "btn_MoveUp";
             this.btn_MoveUp.Size = new System.Drawing.Size(50, 50);
             this.btn_MoveUp.TabIndex = 6;
@@ -110,7 +114,7 @@
             // 
             // btn_ZoomIn
             // 
-            this.btn_ZoomIn.Location = new System.Drawing.Point(13, 69);
+            this.btn_ZoomIn.Location = new System.Drawing.Point(6, 63);
             this.btn_ZoomIn.Name = "btn_ZoomIn";
             this.btn_ZoomIn.Size = new System.Drawing.Size(50, 50);
             this.btn_ZoomIn.TabIndex = 7;
@@ -120,7 +124,7 @@
             // 
             // btn_Reset
             // 
-            this.btn_Reset.Location = new System.Drawing.Point(69, 125);
+            this.btn_Reset.Location = new System.Drawing.Point(62, 119);
             this.btn_Reset.Name = "btn_Reset";
             this.btn_Reset.Size = new System.Drawing.Size(50, 50);
             this.btn_Reset.TabIndex = 8;
@@ -128,23 +132,45 @@
             this.btn_Reset.UseVisualStyleBackColor = true;
             this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
             // 
+            // tc_Controls
+            // 
+            this.tc_Controls.Controls.Add(this.tp_Controls);
+            this.tc_Controls.Location = new System.Drawing.Point(12, 12);
+            this.tc_Controls.Name = "tc_Controls";
+            this.tc_Controls.SelectedIndex = 0;
+            this.tc_Controls.Size = new System.Drawing.Size(181, 255);
+            this.tc_Controls.TabIndex = 9;
+            // 
+            // tp_Controls
+            // 
+            this.tp_Controls.Controls.Add(this.cb_Universe);
+            this.tp_Controls.Controls.Add(this.btn_Reset);
+            this.tp_Controls.Controls.Add(this.btn_Refresh);
+            this.tp_Controls.Controls.Add(this.btn_ZoomIn);
+            this.tp_Controls.Controls.Add(this.btn_MoveUp);
+            this.tp_Controls.Controls.Add(this.btn_MoveDown);
+            this.tp_Controls.Controls.Add(this.btn_ZoomOut);
+            this.tp_Controls.Controls.Add(this.btn_MoveLeft);
+            this.tp_Controls.Controls.Add(this.btn_MoveRight);
+            this.tp_Controls.Location = new System.Drawing.Point(4, 22);
+            this.tp_Controls.Name = "tp_Controls";
+            this.tp_Controls.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_Controls.Size = new System.Drawing.Size(173, 229);
+            this.tp_Controls.TabIndex = 0;
+            this.tp_Controls.Text = "Map Controls";
+            this.tp_Controls.UseVisualStyleBackColor = true;
+            // 
             // UniverseMap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.btn_Reset);
-            this.Controls.Add(this.btn_ZoomIn);
-            this.Controls.Add(this.btn_MoveUp);
-            this.Controls.Add(this.btn_ZoomOut);
-            this.Controls.Add(this.btn_MoveRight);
-            this.Controls.Add(this.btn_MoveLeft);
-            this.Controls.Add(this.btn_MoveDown);
-            this.Controls.Add(this.btn_Refresh);
-            this.Controls.Add(this.cb_Universe);
+            this.Controls.Add(this.tc_Controls);
             this.Name = "UniverseMap";
             this.Text = "Universe Map";
             this.Load += new System.EventHandler(this.UniverseMap_Load);
+            this.tc_Controls.ResumeLayout(false);
+            this.tp_Controls.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -160,5 +186,7 @@
         private System.Windows.Forms.Button btn_MoveUp;
         private System.Windows.Forms.Button btn_ZoomIn;
         private System.Windows.Forms.Button btn_Reset;
+        private System.Windows.Forms.TabControl tc_Controls;
+        private System.Windows.Forms.TabPage tp_Controls;
     }
 }
