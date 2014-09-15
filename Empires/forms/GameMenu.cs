@@ -41,5 +41,10 @@ namespace Empires.forms
         {
             new BodiesList().Show();
         }
+
+        private void universeMapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new UniverseMap().Show();
+        }
     }
 }
