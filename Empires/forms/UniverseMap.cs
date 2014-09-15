@@ -77,7 +77,7 @@ namespace Empires.forms
 
                         if (cb_GalaxyPaths.Checked)
                         {
-                            formGraphics.DrawLine(greenPen, new Point(drawAtX, drawAtY), new Point(drawAtX + (int)galaxy.xSpeed * 3, drawAtY + (int)galaxy.ySpeed * 3));
+                            formGraphics.DrawLine(greenPen, new Point(drawAtX, drawAtY), new Point(drawAtX + -(int)galaxy.xSpeed * 3, drawAtY + -(int)galaxy.ySpeed * 3));
                         }
                     }
                     else
