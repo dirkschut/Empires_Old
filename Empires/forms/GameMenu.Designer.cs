@@ -30,12 +30,13 @@
         {
             this.ms_Menu = new System.Windows.Forms.MenuStrip();
             this.multiverseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.universesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.universeMapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.galaxiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.solarSystemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bodiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.universeMapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.universesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.galaxyMapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ms_Menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,17 +57,32 @@
             this.universesToolStripMenuItem,
             this.universeMapToolStripMenuItem,
             this.galaxiesToolStripMenuItem,
+            this.galaxyMapToolStripMenuItem,
             this.solarSystemsToolStripMenuItem,
             this.bodiesToolStripMenuItem});
             this.multiverseToolStripMenuItem.Name = "multiverseToolStripMenuItem";
             this.multiverseToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
             this.multiverseToolStripMenuItem.Text = "Multiverse";
             // 
+            // universesToolStripMenuItem
+            // 
+            this.universesToolStripMenuItem.Name = "universesToolStripMenuItem";
+            this.universesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.universesToolStripMenuItem.Text = "Universe List";
+            this.universesToolStripMenuItem.Click += new System.EventHandler(this.universesToolStripMenuItem_Click);
+            // 
+            // universeMapToolStripMenuItem
+            // 
+            this.universeMapToolStripMenuItem.Name = "universeMapToolStripMenuItem";
+            this.universeMapToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.universeMapToolStripMenuItem.Text = "Universe Map";
+            this.universeMapToolStripMenuItem.Click += new System.EventHandler(this.universeMapToolStripMenuItem_Click);
+            // 
             // galaxiesToolStripMenuItem
             // 
             this.galaxiesToolStripMenuItem.Name = "galaxiesToolStripMenuItem";
             this.galaxiesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.galaxiesToolStripMenuItem.Text = "Galaxies";
+            this.galaxiesToolStripMenuItem.Text = "Galaxy List";
             this.galaxiesToolStripMenuItem.Click += new System.EventHandler(this.galaxiesToolStripMenuItem_Click);
             // 
             // solarSystemsToolStripMenuItem
@@ -90,19 +106,12 @@
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
-            // universeMapToolStripMenuItem
+            // galaxyMapToolStripMenuItem
             // 
-            this.universeMapToolStripMenuItem.Name = "universeMapToolStripMenuItem";
-            this.universeMapToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.universeMapToolStripMenuItem.Text = "Universe Map";
-            this.universeMapToolStripMenuItem.Click += new System.EventHandler(this.universeMapToolStripMenuItem_Click);
-            // 
-            // universesToolStripMenuItem
-            // 
-            this.universesToolStripMenuItem.Name = "universesToolStripMenuItem";
-            this.universesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.universesToolStripMenuItem.Text = "Universe List";
-            this.universesToolStripMenuItem.Click += new System.EventHandler(this.universesToolStripMenuItem_Click);
+            this.galaxyMapToolStripMenuItem.Name = "galaxyMapToolStripMenuItem";
+            this.galaxyMapToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.galaxyMapToolStripMenuItem.Text = "Galaxy Map";
+            this.galaxyMapToolStripMenuItem.Click += new System.EventHandler(this.galaxyMapToolStripMenuItem_Click);
             // 
             // GameMenu
             // 
@@ -131,6 +140,7 @@
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem universesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem universeMapToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem galaxyMapToolStripMenuItem;
 
     }
 }

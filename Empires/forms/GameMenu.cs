@@ -46,5 +46,10 @@ namespace Empires.forms
         {
             new UniverseMap().Show();
         }
+
+        private void galaxyMapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new GalaxyMap().Show();
+        }
     }
 }
