@@ -14,6 +14,8 @@ namespace Empires.forms
 {
     public partial class UniverseMap : Form
     {
+        public static int zoomLevel = 1;
+
         public UniverseMap()
         {
             InitializeComponent();
@@ -57,8 +59,8 @@ namespace Empires.forms
 
                     if (galaxy.universe == Objects.game.data.universes[this.cb_Universe.SelectedIndex].ID)
                     {
-                        int drawAtX = (int)((galaxy.x + Finals.UNIVERSE_SIZE) * sizePerPixelX);
-                        int drawAtY = (int)((galaxy.y + Finals.UNIVERSE_SIZE) * sizePerPixelY);
+                        int drawAtX = (int)(((galaxy.x * zoomLevel) + Finals.UNIVERSE_SIZE) * sizePerPixelX);
+                        int drawAtY = (int)(((galaxy.y * zoomLevel) + Finals.UNIVERSE_SIZE) * sizePerPixelY);
 
                         formGraphics.FillEllipse(greenBrush, drawAtX - 1, drawAtY - 1, 3, 3);
                     }
@@ -72,6 +74,21 @@ namespace Empires.forms
                 formGraphics.Dispose();
             }
             
+        }
+
+        private void btn_ZoomIn_Click(object sender, EventArgs e)
+        {
+            zoomLevel++;
+            drawUniverse();
+        }
+
+        private void btn_ZoomOut_Click(object sender, EventArgs e)
+        {
+            if (zoomLevel > 1)
+            {
+                zoomLevel--;
+                drawUniverse();
+            }
         }
     }
 }

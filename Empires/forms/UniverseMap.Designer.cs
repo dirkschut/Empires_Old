@@ -92,6 +92,7 @@
             this.btn_ZoomOut.TabIndex = 5;
             this.btn_ZoomOut.Text = "-";
             this.btn_ZoomOut.UseVisualStyleBackColor = true;
+            this.btn_ZoomOut.Click += new System.EventHandler(this.btn_ZoomOut_Click);
             // 
             // btn_MoveUp
             // 
@@ -110,6 +111,7 @@
             this.btn_ZoomIn.TabIndex = 7;
             this.btn_ZoomIn.Text = "+";
             this.btn_ZoomIn.UseVisualStyleBackColor = true;
+            this.btn_ZoomIn.Click += new System.EventHandler(this.btn_ZoomIn_Click);
             // 
             // UniverseMap
             // 
