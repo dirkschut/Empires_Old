@@ -38,8 +38,8 @@ namespace Empires.forms
         {
             if (this.cb_Galaxy.SelectedIndex >= 0)
             {
-                Double sizePerPixelX = (Double)this.Width / (Finals.UNIVERSE_SIZE * 2);
-                Double sizePerPixelY = (Double)this.Height / (Finals.UNIVERSE_SIZE * 2);
+                Double sizePerPixelX = (Double)this.Width / (Finals.GALAXY_SIZE * 2);
+                Double sizePerPixelY = (Double)this.Height / (Finals.GALAXY_SIZE * 2);
 
                 System.Drawing.SolidBrush blackBrush = new System.Drawing.SolidBrush(System.Drawing.Color.Black);
                 System.Drawing.SolidBrush greenBrush = new SolidBrush(System.Drawing.Color.Green);
@@ -50,24 +50,24 @@ namespace Empires.forms
 
                 formGraphics.FillRectangle(blackBrush, new Rectangle(0, 0, this.Width, this.Height));
 
-                foreach (Galaxy galaxy in Objects.game.data.galaxies)
+                foreach (SolarSystem solarSystem in Objects.game.data.solarSystems)
                 {
 
-                    if (galaxy.universe == Objects.game.data.universes[this.cb_Galaxy.SelectedIndex].ID)
+                    if (solarSystem.galaxy == Objects.game.data.galaxies[this.cb_Galaxy.SelectedIndex].ID)
                     {
-                        int drawAtX = (int)(((galaxy.x * zoomLevel) + Finals.GALAXY_SIZE) * sizePerPixelX) + offsetX * zoomLevel;
-                        int drawAtY = (int)(((galaxy.y * zoomLevel) + Finals.GALAXY_SIZE) * sizePerPixelY) + offsetY * zoomLevel;
+                        int drawAtX = (int)(solarSystem.distanceFromCentre * (Math.Cos((solarSystem.position % 360) * Math.PI / 180)) + Finals.GALAXY_SIZE);
+                        int drawAtY = (int)(solarSystem.distanceFromCentre * (Math.Sin((solarSystem.position % 360) * Math.PI / 180)) + Finals.GALAXY_SIZE);
 
                         formGraphics.FillEllipse(greenBrush, drawAtX - 1, drawAtY - 1, 3, 3);
 
                         if (cb_SolarSystemNames.Checked)
                         {
-                            formGraphics.DrawString(galaxy.ID + " - " + galaxy.name, font, greenBrush, drawAtX, drawAtY);
+                            formGraphics.DrawString(solarSystem.ID + " - " + solarSystem.name, font, greenBrush, drawAtX, drawAtY);
                         }
 
                         if (cb_SolarSystemOrbits.Checked)
                         {
-                            formGraphics.DrawLine(greenPen, new Point(drawAtX, drawAtY), new Point(drawAtX + -(int)galaxy.xSpeed * 3, drawAtY + -(int)galaxy.ySpeed * 3));
+                            
                         }
                     }
                     else
@@ -76,6 +76,7 @@ namespace Empires.forms
                     }
                 }
 
+                greenPen.Dispose();
                 blackBrush.Dispose();
                 formGraphics.Dispose();
             }

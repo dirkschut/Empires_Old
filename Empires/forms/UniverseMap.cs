@@ -86,6 +86,7 @@ namespace Empires.forms
                     }
                 }
 
+                greenPen.Dispose();
                 blackBrush.Dispose();
                 formGraphics.Dispose();
             }
