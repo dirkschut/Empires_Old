@@ -116,5 +116,13 @@ namespace Empires.forms
             offsetX -= 100;
             drawUniverse();
         }
+
+        private void btn_Reset_Click(object sender, EventArgs e)
+        {
+            offsetX = 0;
+            offsetY = 0;
+            zoomLevel = 1;
+            drawUniverse();
+        }
     }
 }

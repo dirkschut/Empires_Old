@@ -36,6 +36,7 @@
             this.btn_ZoomOut = new System.Windows.Forms.Button();
             this.btn_MoveUp = new System.Windows.Forms.Button();
             this.btn_ZoomIn = new System.Windows.Forms.Button();
+            this.btn_Reset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cb_Universe
@@ -117,11 +118,22 @@
             this.btn_ZoomIn.UseVisualStyleBackColor = true;
             this.btn_ZoomIn.Click += new System.EventHandler(this.btn_ZoomIn_Click);
             // 
+            // btn_Reset
+            // 
+            this.btn_Reset.Location = new System.Drawing.Point(69, 125);
+            this.btn_Reset.Name = "btn_Reset";
+            this.btn_Reset.Size = new System.Drawing.Size(50, 50);
+            this.btn_Reset.TabIndex = 8;
+            this.btn_Reset.Text = "Reset";
+            this.btn_Reset.UseVisualStyleBackColor = true;
+            this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
+            // 
             // UniverseMap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.btn_Reset);
             this.Controls.Add(this.btn_ZoomIn);
             this.Controls.Add(this.btn_MoveUp);
             this.Controls.Add(this.btn_ZoomOut);
@@ -147,5 +159,6 @@
         private System.Windows.Forms.Button btn_ZoomOut;
         private System.Windows.Forms.Button btn_MoveUp;
         private System.Windows.Forms.Button btn_ZoomIn;
+        private System.Windows.Forms.Button btn_Reset;
     }
 }
