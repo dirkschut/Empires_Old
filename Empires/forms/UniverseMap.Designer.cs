@@ -65,6 +65,7 @@
             this.btn_MoveDown.TabIndex = 2;
             this.btn_MoveDown.Text = "Down";
             this.btn_MoveDown.UseVisualStyleBackColor = true;
+            this.btn_MoveDown.Click += new System.EventHandler(this.btn_MoveDown_Click);
             // 
             // btn_MoveLeft
             // 
@@ -74,6 +75,7 @@
             this.btn_MoveLeft.TabIndex = 3;
             this.btn_MoveLeft.Text = "Left";
             this.btn_MoveLeft.UseVisualStyleBackColor = true;
+            this.btn_MoveLeft.Click += new System.EventHandler(this.btn_MoveLeft_Click);
             // 
             // btn_MoveRight
             // 
@@ -83,6 +85,7 @@
             this.btn_MoveRight.TabIndex = 4;
             this.btn_MoveRight.Text = "Right";
             this.btn_MoveRight.UseVisualStyleBackColor = true;
+            this.btn_MoveRight.Click += new System.EventHandler(this.btn_MoveRight_Click);
             // 
             // btn_ZoomOut
             // 
@@ -102,6 +105,7 @@
             this.btn_MoveUp.TabIndex = 6;
             this.btn_MoveUp.Text = "Up";
             this.btn_MoveUp.UseVisualStyleBackColor = true;
+            this.btn_MoveUp.Click += new System.EventHandler(this.btn_MoveUp_Click);
             // 
             // btn_ZoomIn
             // 
