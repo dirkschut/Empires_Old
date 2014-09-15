@@ -18,6 +18,8 @@ namespace Empires.forms
         public static int offsetX = 0;
         public static int offsetY = 0;
 
+        public static Font font = new Font("Ariel", 8);
+
         public UniverseMap()
         {
             InitializeComponent();
@@ -65,6 +67,11 @@ namespace Empires.forms
                         int drawAtY = (int)(((galaxy.y * zoomLevel) + Finals.UNIVERSE_SIZE) * sizePerPixelY) + offsetY * zoomLevel;
 
                         formGraphics.FillEllipse(greenBrush, drawAtX - 1, drawAtY - 1, 3, 3);
+
+                        if (cb_GalaxyNames.Checked)
+                        {
+                            formGraphics.DrawString(galaxy.ID + " - " + galaxy.name, font, greenBrush, drawAtX, drawAtY);
+                        }
                     }
                     else
                     {
@@ -122,6 +129,11 @@ namespace Empires.forms
             offsetX = 0;
             offsetY = 0;
             zoomLevel = 1;
+            drawUniverse();
+        }
+
+        private void cb_GalaxyNames_CheckedChanged(object sender, EventArgs e)
+        {
             drawUniverse();
         }
     }

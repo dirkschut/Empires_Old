@@ -39,6 +39,7 @@
             this.btn_Reset = new System.Windows.Forms.Button();
             this.tc_Controls = new System.Windows.Forms.TabControl();
             this.tp_Controls = new System.Windows.Forms.TabPage();
+            this.cb_GalaxyNames = new System.Windows.Forms.CheckBox();
             this.tc_Controls.SuspendLayout();
             this.tp_Controls.SuspendLayout();
             this.SuspendLayout();
@@ -138,11 +139,12 @@
             this.tc_Controls.Location = new System.Drawing.Point(12, 12);
             this.tc_Controls.Name = "tc_Controls";
             this.tc_Controls.SelectedIndex = 0;
-            this.tc_Controls.Size = new System.Drawing.Size(181, 255);
+            this.tc_Controls.Size = new System.Drawing.Size(181, 278);
             this.tc_Controls.TabIndex = 9;
             // 
             // tp_Controls
             // 
+            this.tp_Controls.Controls.Add(this.cb_GalaxyNames);
             this.tp_Controls.Controls.Add(this.cb_Universe);
             this.tp_Controls.Controls.Add(this.btn_Reset);
             this.tp_Controls.Controls.Add(this.btn_Refresh);
@@ -155,10 +157,21 @@
             this.tp_Controls.Location = new System.Drawing.Point(4, 22);
             this.tp_Controls.Name = "tp_Controls";
             this.tp_Controls.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_Controls.Size = new System.Drawing.Size(173, 229);
+            this.tp_Controls.Size = new System.Drawing.Size(173, 252);
             this.tp_Controls.TabIndex = 0;
             this.tp_Controls.Text = "Map Controls";
             this.tp_Controls.UseVisualStyleBackColor = true;
+            // 
+            // cb_GalaxyNames
+            // 
+            this.cb_GalaxyNames.AutoSize = true;
+            this.cb_GalaxyNames.Location = new System.Drawing.Point(7, 229);
+            this.cb_GalaxyNames.Name = "cb_GalaxyNames";
+            this.cb_GalaxyNames.Size = new System.Drawing.Size(94, 17);
+            this.cb_GalaxyNames.TabIndex = 9;
+            this.cb_GalaxyNames.Text = "Galaxy Names";
+            this.cb_GalaxyNames.UseVisualStyleBackColor = true;
+            this.cb_GalaxyNames.CheckedChanged += new System.EventHandler(this.cb_GalaxyNames_CheckedChanged);
             // 
             // UniverseMap
             // 
@@ -171,6 +184,7 @@
             this.Load += new System.EventHandler(this.UniverseMap_Load);
             this.tc_Controls.ResumeLayout(false);
             this.tp_Controls.ResumeLayout(false);
+            this.tp_Controls.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -188,5 +202,6 @@
         private System.Windows.Forms.Button btn_Reset;
         private System.Windows.Forms.TabControl tc_Controls;
         private System.Windows.Forms.TabPage tp_Controls;
+        private System.Windows.Forms.CheckBox cb_GalaxyNames;
     }
 }
