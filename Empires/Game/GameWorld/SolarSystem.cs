@@ -18,6 +18,8 @@ namespace Empires.Game.GameWorld
         public int distanceFromCentre;
         public Double position;
 
+        public static Random rand = new Random();
+
         public SolarSystem(Boolean generate, int galaxy)
         {
             this.ID = Objects.game.data.solarSystemCounter;
@@ -25,8 +27,7 @@ namespace Empires.Game.GameWorld
             this.galaxy = galaxy;
             this.name = Objects.game.data.package.getRandomObjectName();
 
-            Random rand = new Random();
-            distanceFromCentre = rand.Next(10, 1000000);
+            distanceFromCentre = rand.Next(10, Finals.GALAXY_SIZE);
             position = rand.NextDouble() * 360;
 
             Objects.game.data.bodies.Add(new Body(false, ID, Body.TYPE_STAR));

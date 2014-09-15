@@ -21,14 +21,14 @@ namespace Empires.Game.GameWorld
 
         public Boolean generated;
 
+        public static Random rand = new Random();
+
         public Galaxy(Boolean generate, int universe)
         {
             this.ID = Objects.game.data.galaxyCounter;
             Objects.game.data.galaxyCounter++;
             this.universe = universe;
             this.name = Objects.game.data.package.getRandomObjectName();
-
-            Random rand = new Random();
             
             this.x = Calc.genMod() * Finals.UNIVERSE_SIZE;
             this.y = Calc.genMod() * Finals.UNIVERSE_SIZE;

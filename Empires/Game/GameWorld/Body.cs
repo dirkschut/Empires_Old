@@ -25,6 +25,8 @@ namespace Empires.Game.GameWorld
         public Double position;
         public Double speed;
 
+        public static Random rand = new Random();
+
         public Body(Boolean generate, int solarSystem, int type)
         {
             this.ID = Objects.game.data.bodyCounter;
@@ -32,8 +34,6 @@ namespace Empires.Game.GameWorld
             this.type = type;
             this.name = Objects.game.data.package.getRandomObjectName();
             this.solarSystem = solarSystem;
-
-            Random rand = new Random();
 
             switch (type)
             {
