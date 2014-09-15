@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -39,17 +40,38 @@ namespace Empires.forms
 
         private void drawUniverse()
         {
-            int sizePerPixelX = Finals.UNIVERSE_SIZE * 2 / this.Width;
-            int sizePerPixelY = Finals.UNIVERSE_SIZE * 2 / this.Height;
+            if (this.cb_Universe.SelectedIndex >= 0)
+            {
+                Double sizePerPixelX = (Double)this.Width / (Finals.UNIVERSE_SIZE * 2);
+                Double sizePerPixelY = (Double)this.Height / (Finals.UNIVERSE_SIZE * 2);
 
-            System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.Color.Black);
-            System.Drawing.Graphics formGraphics;
-            formGraphics = this.CreateGraphics();
+                System.Drawing.SolidBrush blackBrush = new System.Drawing.SolidBrush(System.Drawing.Color.Black);
+                System.Drawing.SolidBrush greenBrush = new SolidBrush(System.Drawing.Color.Green);
+                System.Drawing.Graphics formGraphics;
+                formGraphics = this.CreateGraphics();
 
-            formGraphics.FillRectangle(myBrush, new Rectangle(0, 0, this.Width, this.Height));
+                formGraphics.FillRectangle(blackBrush, new Rectangle(0, 0, this.Width, this.Height));
 
-            myBrush.Dispose();
-            formGraphics.Dispose();
+                foreach (Galaxy galaxy in Objects.game.data.galaxies)
+                {
+
+                    if (galaxy.universe == Objects.game.data.universes[this.cb_Universe.SelectedIndex].ID)
+                    {
+                        int drawAtX = (int)((galaxy.x + Finals.UNIVERSE_SIZE) * sizePerPixelX);
+                        int drawAtY = (int)((galaxy.y + Finals.UNIVERSE_SIZE) * sizePerPixelY);
+
+                        formGraphics.FillEllipse(greenBrush, drawAtX - 1, drawAtY - 1, 3, 3);
+                    }
+                    else
+                    {
+                        Debug.WriteLine("Test");
+                    }
+                }
+
+                blackBrush.Dispose();
+                formGraphics.Dispose();
+            }
+            
         }
     }
 }
