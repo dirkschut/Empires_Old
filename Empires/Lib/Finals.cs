@@ -10,10 +10,13 @@ namespace Empires.Lib
         public const String PROJECT_NAME = "Empires";
         public const Double PROJECT_VERSION = 0.0;
 
+
+        public const int UNIVERSE_SIZE = 10000;
+
         public const int MIN_GALAXIES = 1000;
         public const int MAX_GALAXIES = 10000;
-        public const int UNIVERSE_SIZE = 10000;
-        public const int UNIVERSE_SPEED = 5;
+        public const int GALAXY_SPEED = 5;
+        public const int GALAXY_SIZE = 10000;
 
         public const int MIN_SOLARSYSTEMS = 1000;
         public const int MAX_SOLARSYSTEMS = 10000;

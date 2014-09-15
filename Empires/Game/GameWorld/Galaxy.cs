@@ -33,8 +33,8 @@ namespace Empires.Game.GameWorld
             this.x = Calc.genMod() * Finals.UNIVERSE_SIZE;
             this.y = Calc.genMod() * Finals.UNIVERSE_SIZE;
 
-            this.xSpeed = Calc.genMod() * Finals.UNIVERSE_SPEED;
-            this.ySpeed = Calc.genMod() * Finals.UNIVERSE_SPEED;
+            this.xSpeed = Calc.genMod() * Finals.GALAXY_SPEED;
+            this.ySpeed = Calc.genMod() * Finals.GALAXY_SPEED;
 
             if (generate)
             {
