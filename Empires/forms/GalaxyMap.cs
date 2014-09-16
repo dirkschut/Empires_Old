@@ -126,5 +126,15 @@ namespace Empires.forms
             zoomLevel = 1;
             drawGalaxy();
         }
+
+        private void cb_SolarSystemNames_CheckedChanged(object sender, EventArgs e)
+        {
+            drawGalaxy();
+        }
+
+        private void cb_SolarSystemOrbits_CheckedChanged(object sender, EventArgs e)
+        {
+            drawGalaxy();
+        }
     }
 }

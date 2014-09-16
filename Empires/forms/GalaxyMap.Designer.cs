@@ -84,6 +84,7 @@
             this.cb_SolarSystemOrbits.TabIndex = 10;
             this.cb_SolarSystemOrbits.Text = "Solar System Orbits";
             this.cb_SolarSystemOrbits.UseVisualStyleBackColor = true;
+            this.cb_SolarSystemOrbits.CheckedChanged += new System.EventHandler(this.cb_SolarSystemOrbits_CheckedChanged);
             // 
             // cb_SolarSystemNames
             // 
@@ -94,6 +95,7 @@
             this.cb_SolarSystemNames.TabIndex = 9;
             this.cb_SolarSystemNames.Text = "Solar System Names";
             this.cb_SolarSystemNames.UseVisualStyleBackColor = true;
+            this.cb_SolarSystemNames.CheckedChanged += new System.EventHandler(this.cb_SolarSystemNames_CheckedChanged);
             // 
             // cb_Galaxy
             // 
