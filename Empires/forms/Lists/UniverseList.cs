@@ -26,5 +26,10 @@ namespace Empires.forms
                 this.lb_Universes.Items.Add(universe.ID + " - " + universe.name);
             }
         }
+
+        private void btn_InspectUniverse_Click(object sender, EventArgs e)
+        {
+            new InspectUniverse().Show();
+        }
     }
 }

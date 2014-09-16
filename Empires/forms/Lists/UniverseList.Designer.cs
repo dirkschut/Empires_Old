@@ -48,6 +48,7 @@
             this.btn_InspectUniverse.TabIndex = 1;
             this.btn_InspectUniverse.Text = "Inspect Universe";
             this.btn_InspectUniverse.UseVisualStyleBackColor = true;
+            this.btn_InspectUniverse.Click += new System.EventHandler(this.btn_InspectUniverse_Click);
             // 
             // UniverseList
             // 
