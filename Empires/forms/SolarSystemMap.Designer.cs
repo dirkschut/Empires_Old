@@ -227,6 +227,7 @@
             this.cb_AsteroidDraw.TabIndex = 13;
             this.cb_AsteroidDraw.Text = "Draw Asteroids";
             this.cb_AsteroidDraw.UseVisualStyleBackColor = true;
+            this.cb_AsteroidDraw.CheckedChanged += new System.EventHandler(this.cb_AsteroidDraw_CheckedChanged);
             // 
             // cb_StarName
             // 
@@ -237,6 +238,7 @@
             this.cb_StarName.TabIndex = 14;
             this.cb_StarName.Text = "Star Name";
             this.cb_StarName.UseVisualStyleBackColor = true;
+            this.cb_StarName.CheckedChanged += new System.EventHandler(this.cb_StarName_CheckedChanged);
             // 
             // cb_PlanetDraw
             // 
@@ -247,6 +249,7 @@
             this.cb_PlanetDraw.TabIndex = 15;
             this.cb_PlanetDraw.Text = "Draw Planets";
             this.cb_PlanetDraw.UseVisualStyleBackColor = true;
+            this.cb_PlanetDraw.CheckedChanged += new System.EventHandler(this.cb_PlanetDraw_CheckedChanged);
             // 
             // SolarSystemMap
             // 
