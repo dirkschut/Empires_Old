@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Empires.Game.GameWorld;
+using Empires.Lib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +16,15 @@ namespace Empires.forms
         public SolarSystemMap()
         {
             InitializeComponent();
+        }
+
+        private void SolarSystemMap_Load(object sender, EventArgs e)
+        {
+            this.cb_SolarSystem.Items.Clear();
+            foreach (SolarSystem solarSystem in Objects.game.data.solarSystems)
+            {
+                this.cb_SolarSystem.Items.Add(solarSystem.ID + " - " + solarSystem.name);
+            }
         }
     }
 }

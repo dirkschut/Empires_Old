@@ -207,6 +207,7 @@
             this.Controls.Add(this.tc_Controls);
             this.Name = "SolarSystemMap";
             this.Text = "Solar System Map";
+            this.Load += new System.EventHandler(this.SolarSystemMap_Load);
             this.tc_Controls.ResumeLayout(false);
             this.tp_Controls.ResumeLayout(false);
             this.tp_Controls.PerformLayout();
