@@ -30,6 +30,8 @@
         {
             this.tc_Controls = new System.Windows.Forms.TabControl();
             this.tp_Controls = new System.Windows.Forms.TabPage();
+            this.cb_AsteroidOrbits = new System.Windows.Forms.CheckBox();
+            this.cb_AsteroidNames = new System.Windows.Forms.CheckBox();
             this.cb_PlanetOrbits = new System.Windows.Forms.CheckBox();
             this.cb_PlanetNames = new System.Windows.Forms.CheckBox();
             this.cb_SolarSystem = new System.Windows.Forms.ComboBox();
@@ -41,8 +43,6 @@
             this.btn_ZoomOut = new System.Windows.Forms.Button();
             this.btn_MoveLeft = new System.Windows.Forms.Button();
             this.btn_MoveRight = new System.Windows.Forms.Button();
-            this.cb_AsteroidOrbits = new System.Windows.Forms.CheckBox();
-            this.cb_AsteroidNames = new System.Windows.Forms.CheckBox();
             this.tc_Controls.SuspendLayout();
             this.tp_Controls.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +78,26 @@
             this.tp_Controls.TabIndex = 0;
             this.tp_Controls.Text = "Map Controls";
             this.tp_Controls.UseVisualStyleBackColor = true;
+            // 
+            // cb_AsteroidOrbits
+            // 
+            this.cb_AsteroidOrbits.AutoSize = true;
+            this.cb_AsteroidOrbits.Location = new System.Drawing.Point(7, 300);
+            this.cb_AsteroidOrbits.Name = "cb_AsteroidOrbits";
+            this.cb_AsteroidOrbits.Size = new System.Drawing.Size(94, 17);
+            this.cb_AsteroidOrbits.TabIndex = 12;
+            this.cb_AsteroidOrbits.Text = "Asteroid Orbits";
+            this.cb_AsteroidOrbits.UseVisualStyleBackColor = true;
+            // 
+            // cb_AsteroidNames
+            // 
+            this.cb_AsteroidNames.AutoSize = true;
+            this.cb_AsteroidNames.Location = new System.Drawing.Point(7, 276);
+            this.cb_AsteroidNames.Name = "cb_AsteroidNames";
+            this.cb_AsteroidNames.Size = new System.Drawing.Size(98, 17);
+            this.cb_AsteroidNames.TabIndex = 11;
+            this.cb_AsteroidNames.Text = "Asteroid names";
+            this.cb_AsteroidNames.UseVisualStyleBackColor = true;
             // 
             // cb_PlanetOrbits
             // 
@@ -116,6 +136,7 @@
             this.btn_Reset.TabIndex = 8;
             this.btn_Reset.Text = "Reset";
             this.btn_Reset.UseVisualStyleBackColor = true;
+            this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
             // 
             // btn_Refresh
             // 
@@ -125,6 +146,7 @@
             this.btn_Refresh.TabIndex = 1;
             this.btn_Refresh.Text = "Refresh";
             this.btn_Refresh.UseVisualStyleBackColor = true;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // btn_ZoomIn
             // 
@@ -134,6 +156,7 @@
             this.btn_ZoomIn.TabIndex = 7;
             this.btn_ZoomIn.Text = "+";
             this.btn_ZoomIn.UseVisualStyleBackColor = true;
+            this.btn_ZoomIn.Click += new System.EventHandler(this.btn_ZoomIn_Click);
             // 
             // btn_MoveUp
             // 
@@ -143,6 +166,7 @@
             this.btn_MoveUp.TabIndex = 6;
             this.btn_MoveUp.Text = "Up";
             this.btn_MoveUp.UseVisualStyleBackColor = true;
+            this.btn_MoveUp.Click += new System.EventHandler(this.btn_MoveUp_Click);
             // 
             // btn_MoveDown
             // 
@@ -152,6 +176,7 @@
             this.btn_MoveDown.TabIndex = 2;
             this.btn_MoveDown.Text = "Down";
             this.btn_MoveDown.UseVisualStyleBackColor = true;
+            this.btn_MoveDown.Click += new System.EventHandler(this.btn_MoveDown_Click);
             // 
             // btn_ZoomOut
             // 
@@ -161,6 +186,7 @@
             this.btn_ZoomOut.TabIndex = 5;
             this.btn_ZoomOut.Text = "-";
             this.btn_ZoomOut.UseVisualStyleBackColor = true;
+            this.btn_ZoomOut.Click += new System.EventHandler(this.btn_ZoomOut_Click);
             // 
             // btn_MoveLeft
             // 
@@ -170,6 +196,7 @@
             this.btn_MoveLeft.TabIndex = 3;
             this.btn_MoveLeft.Text = "Left";
             this.btn_MoveLeft.UseVisualStyleBackColor = true;
+            this.btn_MoveLeft.Click += new System.EventHandler(this.btn_MoveLeft_Click);
             // 
             // btn_MoveRight
             // 
@@ -179,26 +206,7 @@
             this.btn_MoveRight.TabIndex = 4;
             this.btn_MoveRight.Text = "Right";
             this.btn_MoveRight.UseVisualStyleBackColor = true;
-            // 
-            // cb_AsteroidOrbits
-            // 
-            this.cb_AsteroidOrbits.AutoSize = true;
-            this.cb_AsteroidOrbits.Location = new System.Drawing.Point(7, 300);
-            this.cb_AsteroidOrbits.Name = "cb_AsteroidOrbits";
-            this.cb_AsteroidOrbits.Size = new System.Drawing.Size(94, 17);
-            this.cb_AsteroidOrbits.TabIndex = 12;
-            this.cb_AsteroidOrbits.Text = "Asteroid Orbits";
-            this.cb_AsteroidOrbits.UseVisualStyleBackColor = true;
-            // 
-            // cb_AsteroidNames
-            // 
-            this.cb_AsteroidNames.AutoSize = true;
-            this.cb_AsteroidNames.Location = new System.Drawing.Point(7, 276);
-            this.cb_AsteroidNames.Name = "cb_AsteroidNames";
-            this.cb_AsteroidNames.Size = new System.Drawing.Size(98, 17);
-            this.cb_AsteroidNames.TabIndex = 11;
-            this.cb_AsteroidNames.Text = "Asteroid names";
-            this.cb_AsteroidNames.UseVisualStyleBackColor = true;
+            this.btn_MoveRight.Click += new System.EventHandler(this.btn_MoveRight_Click);
             // 
             // SolarSystemMap
             // 

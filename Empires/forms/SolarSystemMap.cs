@@ -82,5 +82,57 @@ namespace Empires.forms
         {
             drawSolarSystem();
         }
+
+        private void btn_ZoomIn_Click(object sender, EventArgs e)
+        {
+            zoomLevel++;
+            drawSolarSystem();
+        }
+
+        private void btn_ZoomOut_Click(object sender, EventArgs e)
+        {
+            if (zoomLevel > 1)
+            {
+                zoomLevel--;
+                drawSolarSystem();
+            }
+        }
+
+        private void btn_MoveUp_Click(object sender, EventArgs e)
+        {
+            offsetY += 100;
+            drawSolarSystem();
+        }
+
+        private void btn_MoveDown_Click(object sender, EventArgs e)
+        {
+            offsetY -= 100;
+            drawSolarSystem();
+        }
+
+        private void btn_MoveLeft_Click(object sender, EventArgs e)
+        {
+            offsetX += 100;
+            drawSolarSystem();
+        }
+
+        private void btn_MoveRight_Click(object sender, EventArgs e)
+        {
+            offsetX -= 100;
+            drawSolarSystem();
+        }
+
+        private void btn_Reset_Click(object sender, EventArgs e)
+        {
+            offsetX = 0;
+            offsetY = 0;
+            zoomLevel = 1;
+            drawSolarSystem();
+        }
+
+        private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+            drawSolarSystem();
+        }
     }
 }
