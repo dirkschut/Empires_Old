@@ -55,8 +55,8 @@ namespace Empires.forms
 
                     if (solarSystem.galaxy == Objects.game.data.galaxies[this.cb_Galaxy.SelectedIndex].ID)
                     {
-                        int drawAtX = (int)(sizePerPixelX * (solarSystem.distanceFromCentre * (Math.Cos((solarSystem.position % 360) * Math.PI / 180)) + Finals.GALAXY_SIZE));
-                        int drawAtY = (int)(sizePerPixelY * (solarSystem.distanceFromCentre * (Math.Sin((solarSystem.position % 360) * Math.PI / 180)) + Finals.GALAXY_SIZE));
+                        int drawAtX = (int)(sizePerPixelX * (solarSystem.distanceFromCentre * (Math.Cos((solarSystem.position % 360) * Math.PI / 180)) * zoomLevel + Finals.GALAXY_SIZE)) + offsetX * zoomLevel;
+                        int drawAtY = (int)(sizePerPixelY * (solarSystem.distanceFromCentre * (Math.Sin((solarSystem.position % 360) * Math.PI / 180)) * zoomLevel + Finals.GALAXY_SIZE)) + offsetY * zoomLevel;
 
                         formGraphics.FillEllipse(greenBrush, drawAtX - 1, drawAtY - 1, 3, 3);
 
