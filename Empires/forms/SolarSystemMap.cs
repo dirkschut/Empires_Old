@@ -55,15 +55,37 @@ namespace Empires.forms
                     {
                         int drawAtX = (int)(sizePerPixelX * (body.distanceFromCentre * (Math.Cos((body.position % 360) * Math.PI / 180)) * zoomLevel + Finals.GALAXY_SIZE)) + offsetX * zoomLevel;
                         int drawAtY = (int)(sizePerPixelY * (body.distanceFromCentre * (Math.Sin((body.position % 360) * Math.PI / 180)) * zoomLevel + Finals.GALAXY_SIZE)) + offsetY * zoomLevel;
+                        Boolean drawBody = true;
+                        Boolean drawName = false;
+                        Boolean drawOrbit = false;
 
-                        formGraphics.FillEllipse(greenBrush, drawAtX - 1, drawAtY - 1, 3, 3);
+                        switch (body.type)
+                        {
+                            case Body.TYPE_PLANET:
+                                if (cb_PlanetNames.Checked)
+                                    drawName = true;
+                                if (cb_PlanetOrbits.Checked)
+                                    drawOrbit = true;
+                                break;
+                            case Body.TYPE_ASTROID:
+                                if (cb_AsteroidNames.Checked)
+                                    drawName = true;
+                                if (cb_AsteroidOrbits.Checked)
+                                    drawOrbit = true;
+                                break;
+                        }
 
-                        if (cb_PlanetNames.Checked)
+                        if (drawBody)
+                        {
+                            formGraphics.FillEllipse(greenBrush, drawAtX - 1, drawAtY - 1, 3, 3);
+                        }
+
+                        if (drawName)
                         {
                             formGraphics.DrawString(body.ID + " - " + body.name, font, greenBrush, drawAtX, drawAtY);
                         }
 
-                        if (cb_PlanetOrbits.Checked)
+                        if (drawOrbit)
                         {
                             int drawEllipseX = (int)((((Finals.GALAXY_SIZE - body.distanceFromCentre * zoomLevel)) * sizePerPixelX) + offsetX * zoomLevel);
                             int drawEllipseY = (int)((((Finals.GALAXY_SIZE - body.distanceFromCentre * zoomLevel)) * sizePerPixelY) + offsetY * zoomLevel);
