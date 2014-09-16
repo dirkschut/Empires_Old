@@ -55,19 +55,28 @@ namespace Empires.forms
                     {
                         int drawAtX = (int)(sizePerPixelX * (body.distanceFromCentre * (Math.Cos((body.position % 360) * Math.PI / 180)) * zoomLevel + Finals.GALAXY_SIZE)) + offsetX * zoomLevel;
                         int drawAtY = (int)(sizePerPixelY * (body.distanceFromCentre * (Math.Sin((body.position % 360) * Math.PI / 180)) * zoomLevel + Finals.GALAXY_SIZE)) + offsetY * zoomLevel;
-                        Boolean drawBody = true;
+                        Boolean drawBody = false;
                         Boolean drawName = false;
                         Boolean drawOrbit = false;
 
                         switch (body.type)
                         {
+                            case Body.TYPE_STAR:
+                                drawBody = true;
+                                if (cb_StarName.Checked)
+                                    drawName = true;
+                                break;
                             case Body.TYPE_PLANET:
+                                if (cb_PlanetDraw.Checked)
+                                    drawBody = true;
                                 if (cb_PlanetNames.Checked)
                                     drawName = true;
                                 if (cb_PlanetOrbits.Checked)
                                     drawOrbit = true;
                                 break;
                             case Body.TYPE_ASTROID:
+                                if (cb_AsteroidDraw.Checked)
+                                    drawBody = true;
                                 if (cb_AsteroidNames.Checked)
                                     drawName = true;
                                 if (cb_AsteroidOrbits.Checked)
