@@ -93,6 +93,12 @@
     <Compile Include="forms\SolarSystemList.Designer.cs">
       <DependentUpon>SolarSystemList.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\SolarSystemMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\SolarSystemMap.Designer.cs">
+      <DependentUpon>SolarSystemMap.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\UniverseList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\SolarSystemList.resx">
       <DependentUpon>SolarSystemList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\SolarSystemMap.resx">
+      <DependentUpon>SolarSystemMap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\UniverseList.resx">
       <DependentUpon>UniverseList.cs</DependentUpon>

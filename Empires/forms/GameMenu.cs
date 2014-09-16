@@ -51,5 +51,10 @@ namespace Empires.forms
         {
             new GalaxyMap().Show();
         }
+
+        private void solarSystemMapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new SolarSystemMap().Show();
+        }
     }
 }
