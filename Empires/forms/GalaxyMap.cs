@@ -67,7 +67,7 @@ namespace Empires.forms
 
                         if (cb_SolarSystemOrbits.Checked)
                         {
-                            
+                            formGraphics.DrawEllipse(greenPen, (int)((Finals.GALAXY_SIZE - solarSystem.distanceFromCentre) * sizePerPixelX), (int)((Finals.GALAXY_SIZE - solarSystem.distanceFromCentre) * sizePerPixelY), (int)((2 * solarSystem.distanceFromCentre) * sizePerPixelX), (int)((2 * solarSystem.distanceFromCentre) * sizePerPixelY));
                         }
 
                         Debug.WriteLine(drawAtX + "," + drawAtY);
