@@ -13,6 +13,12 @@ namespace Empires.forms
 {
     public partial class SolarSystemMap : Form
     {
+        public static int zoomLevel = 1;
+        public static int offsetX = 0;
+        public static int offsetY = 0;
+
+        public static Font font = new Font("Ariel", 8);
+
         public SolarSystemMap()
         {
             InitializeComponent();
@@ -25,6 +31,56 @@ namespace Empires.forms
             {
                 this.cb_SolarSystem.Items.Add(solarSystem.ID + " - " + solarSystem.name);
             }
+        }
+
+        private void drawSolarSystem()
+        {
+            if (cb_SolarSystem.SelectedIndex >= 0)
+            {
+                Double sizePerPixelX = (Double)this.Width / (Finals.GALAXY_SIZE * 2);
+                Double sizePerPixelY = (Double)this.Height / (Finals.GALAXY_SIZE * 2);
+
+                System.Drawing.SolidBrush blackBrush = new System.Drawing.SolidBrush(System.Drawing.Color.Black);
+                System.Drawing.SolidBrush greenBrush = new SolidBrush(System.Drawing.Color.Green);
+                Pen greenPen = new Pen(Color.Green);
+
+                System.Drawing.Graphics formGraphics;
+                formGraphics = this.CreateGraphics();
+
+                formGraphics.FillRectangle(blackBrush, new Rectangle(0, 0, this.Width, this.Height));
+
+                foreach (Body body in Objects.game.data.bodies)
+                {
+                    if (body.solarSystem == cb_SolarSystem.SelectedIndex)
+                    {
+                        int drawAtX = (int)(sizePerPixelX * (body.distanceFromCentre * (Math.Cos((body.position % 360) * Math.PI / 180)) * zoomLevel + Finals.GALAXY_SIZE)) + offsetX * zoomLevel;
+                        int drawAtY = (int)(sizePerPixelY * (body.distanceFromCentre * (Math.Sin((body.position % 360) * Math.PI / 180)) * zoomLevel + Finals.GALAXY_SIZE)) + offsetY * zoomLevel;
+
+                        formGraphics.FillEllipse(greenBrush, drawAtX - 1, drawAtY - 1, 3, 3);
+
+                        if (cb_PlanetNames.Checked)
+                        {
+                            formGraphics.DrawString(body.ID + " - " + body.name, font, greenBrush, drawAtX, drawAtY);
+                        }
+
+                        if (cb_PlanetOrbits.Checked)
+                        {
+                            int drawEllipseX = (int)((((Finals.GALAXY_SIZE - body.distanceFromCentre * zoomLevel)) * sizePerPixelX) + offsetX * zoomLevel);
+                            int drawEllipseY = (int)((((Finals.GALAXY_SIZE - body.distanceFromCentre * zoomLevel)) * sizePerPixelY) + offsetY * zoomLevel);
+                            formGraphics.DrawEllipse(greenPen, drawEllipseX, drawEllipseY, (int)((2 * body.distanceFromCentre) * sizePerPixelX) * zoomLevel, (int)((2 * body.distanceFromCentre) * sizePerPixelY) * zoomLevel);
+                        }
+                    }
+                }
+
+                greenPen.Dispose();
+                blackBrush.Dispose();
+                formGraphics.Dispose();
+            }
+        }
+
+        private void cb_SolarSystem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            drawSolarSystem();
         }
     }
 }

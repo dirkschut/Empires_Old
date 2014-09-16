@@ -27,7 +27,7 @@ namespace Empires.Game.GameWorld
             this.galaxy = galaxy;
             this.name = Objects.game.data.package.getRandomObjectName();
 
-            distanceFromCentre = rand.Next(10, Finals.GALAXY_SIZE);
+            distanceFromCentre = rand.Next(10, Finals.SOLARSYSTEM_SIZE);
             position = rand.NextDouble() * 360;
 
             Objects.game.data.bodies.Add(new Body(false, ID, Body.TYPE_STAR));

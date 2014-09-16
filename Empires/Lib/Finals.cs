@@ -20,6 +20,7 @@ namespace Empires.Lib
 
         public const int MIN_SOLARSYSTEMS = 1000;
         public const int MAX_SOLARSYSTEMS = 10000;
+        public const int SOLARSYSTEM_SIZE = 10000;
 
         public const int MIN_PLANETS = 3;
         public const int MAX_PLANETS = 20;

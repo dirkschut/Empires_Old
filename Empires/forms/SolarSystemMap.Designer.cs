@@ -106,6 +106,7 @@
             this.cb_SolarSystem.Name = "cb_SolarSystem";
             this.cb_SolarSystem.Size = new System.Drawing.Size(162, 21);
             this.cb_SolarSystem.TabIndex = 0;
+            this.cb_SolarSystem.SelectedIndexChanged += new System.EventHandler(this.cb_SolarSystem_SelectedIndexChanged);
             // 
             // btn_Reset
             // 
