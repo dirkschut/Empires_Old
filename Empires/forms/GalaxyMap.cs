@@ -136,5 +136,15 @@ namespace Empires.forms
         {
             drawGalaxy();
         }
+
+        private void cb_Galaxy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            drawGalaxy();
+        }
+
+        private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+            drawGalaxy();
+        }
     }
 }

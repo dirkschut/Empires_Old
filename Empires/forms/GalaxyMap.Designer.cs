@@ -104,6 +104,7 @@
             this.cb_Galaxy.Name = "cb_Galaxy";
             this.cb_Galaxy.Size = new System.Drawing.Size(162, 21);
             this.cb_Galaxy.TabIndex = 0;
+            this.cb_Galaxy.SelectedIndexChanged += new System.EventHandler(this.cb_Galaxy_SelectedIndexChanged);
             // 
             // btn_Reset
             // 
@@ -123,6 +124,7 @@
             this.btn_Refresh.TabIndex = 1;
             this.btn_Refresh.Text = "Refresh";
             this.btn_Refresh.UseVisualStyleBackColor = true;
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // btn_ZoomIn
             // 
