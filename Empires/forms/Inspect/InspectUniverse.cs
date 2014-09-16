@@ -48,6 +48,26 @@ namespace Empires.forms
                 }
             }
 
+            foreach (Body body in Objects.game.data.bodies)
+            {
+                if (Objects.game.data.galaxies[Objects.game.data.solarSystems[body.solarSystem].galaxy].universe == universe)
+                {
+                    bodies++;
+                    switch (body.type)
+                    {
+                        case Body.TYPE_STAR:
+                            stars++;
+                            break;
+                        case Body.TYPE_PLANET:
+                            planets++;
+                            break;
+                        case Body.TYPE_ASTROID:
+                            asteroids++;
+                            break;
+                    }
+                }
+            }
+
             this.lbl_GalaxiesAmount.Text = galaxies.ToString();
             this.lbl_SolarSystemsAmount.Text = solarSystems.ToString();
             this.lbl_BodiesAmount.Text = bodies.ToString();
