@@ -235,6 +235,7 @@
             this.MaximizeBox = false;
             this.Name = "InspectUniverse";
             this.Text = "Universe";
+            this.Load += new System.EventHandler(this.InspectUniverse_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -29,7 +29,10 @@ namespace Empires.forms
 
         private void btn_InspectUniverse_Click(object sender, EventArgs e)
         {
-            new InspectUniverse().Show();
+            if (this.lb_Universes.SelectedIndex >= 0)
+            {
+                new InspectUniverse(lb_Universes.SelectedIndex).Show();
+            }
         }
     }
 }

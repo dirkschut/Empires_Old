@@ -11,9 +11,17 @@ namespace Empires.forms
 {
     public partial class InspectUniverse : Form
     {
-        public InspectUniverse()
+        public int universe = 0;
+
+        public InspectUniverse(int universe)
         {
+            this.universe = universe;
             InitializeComponent();
+        }
+
+        private void InspectUniverse_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
