@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Empires.Game.GameWorld;
+using Empires.Lib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,7 +23,37 @@ namespace Empires.forms
 
         private void InspectUniverse_Load(object sender, EventArgs e)
         {
+            this.tb_UniverseName.Text = Objects.game.data.universes[universe].name;
 
+            int galaxies = 0;
+            int solarSystems = 0;
+            int bodies = 0;
+            int stars = 0;
+            int planets = 0;
+            int asteroids = 0;
+
+            foreach (Galaxy galaxy in Objects.game.data.galaxies)
+            {
+                if (galaxy.universe == universe)
+                {
+                    galaxies++;
+                }
+            }
+
+            foreach (SolarSystem solarSystem in Objects.game.data.solarSystems)
+            {
+                if (Objects.game.data.galaxies[solarSystem.galaxy].universe == universe)
+                {
+                    solarSystems++;
+                }
+            }
+
+            this.lbl_GalaxiesAmount.Text = galaxies.ToString();
+            this.lbl_SolarSystemsAmount.Text = solarSystems.ToString();
+            this.lbl_BodiesAmount.Text = bodies.ToString();
+            this.lbl_StarsAmount.Text = stars.ToString();
+            this.lbl_PlanetsAmount.Text = planets.ToString();
+            this.lbl_AsteroidsAmount.Text = asteroids.ToString();
         }
     }
 }

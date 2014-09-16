@@ -46,6 +46,9 @@
             this.btn_Asteroids = new System.Windows.Forms.Button();
             this.lbl_Asteroids = new System.Windows.Forms.Label();
             this.lbl_AsteroidsAmount = new System.Windows.Forms.Label();
+            this.btn_Galaxies = new System.Windows.Forms.Button();
+            this.lbl_Galaxies = new System.Windows.Forms.Label();
+            this.lbl_GalaxiesAmount = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_Name
@@ -67,7 +70,7 @@
             // lbl_SolarSystemsAmount
             // 
             this.lbl_SolarSystemsAmount.AutoSize = true;
-            this.lbl_SolarSystemsAmount.Location = new System.Drawing.Point(95, 45);
+            this.lbl_SolarSystemsAmount.Location = new System.Drawing.Point(95, 73);
             this.lbl_SolarSystemsAmount.Name = "lbl_SolarSystemsAmount";
             this.lbl_SolarSystemsAmount.Size = new System.Drawing.Size(97, 13);
             this.lbl_SolarSystemsAmount.TabIndex = 2;
@@ -76,7 +79,7 @@
             // lbl_SolarSystems
             // 
             this.lbl_SolarSystems.AutoSize = true;
-            this.lbl_SolarSystems.Location = new System.Drawing.Point(12, 45);
+            this.lbl_SolarSystems.Location = new System.Drawing.Point(12, 73);
             this.lbl_SolarSystems.Name = "lbl_SolarSystems";
             this.lbl_SolarSystems.Size = new System.Drawing.Size(73, 13);
             this.lbl_SolarSystems.TabIndex = 6;
@@ -84,7 +87,7 @@
             // 
             // btn_SolarSystems
             // 
-            this.btn_SolarSystems.Location = new System.Drawing.Point(202, 40);
+            this.btn_SolarSystems.Location = new System.Drawing.Point(202, 68);
             this.btn_SolarSystems.Name = "btn_SolarSystems";
             this.btn_SolarSystems.Size = new System.Drawing.Size(70, 23);
             this.btn_SolarSystems.TabIndex = 7;
@@ -102,7 +105,7 @@
             // 
             // btn_Bodies
             // 
-            this.btn_Bodies.Location = new System.Drawing.Point(202, 69);
+            this.btn_Bodies.Location = new System.Drawing.Point(202, 98);
             this.btn_Bodies.Name = "btn_Bodies";
             this.btn_Bodies.Size = new System.Drawing.Size(70, 23);
             this.btn_Bodies.TabIndex = 11;
@@ -112,7 +115,7 @@
             // lbl_Bodies
             // 
             this.lbl_Bodies.AutoSize = true;
-            this.lbl_Bodies.Location = new System.Drawing.Point(12, 74);
+            this.lbl_Bodies.Location = new System.Drawing.Point(12, 103);
             this.lbl_Bodies.Name = "lbl_Bodies";
             this.lbl_Bodies.Size = new System.Drawing.Size(39, 13);
             this.lbl_Bodies.TabIndex = 10;
@@ -121,7 +124,7 @@
             // lbl_BodiesAmount
             // 
             this.lbl_BodiesAmount.AutoSize = true;
-            this.lbl_BodiesAmount.Location = new System.Drawing.Point(95, 74);
+            this.lbl_BodiesAmount.Location = new System.Drawing.Point(95, 103);
             this.lbl_BodiesAmount.Name = "lbl_BodiesAmount";
             this.lbl_BodiesAmount.Size = new System.Drawing.Size(47, 13);
             this.lbl_BodiesAmount.TabIndex = 9;
@@ -129,7 +132,7 @@
             // 
             // btn_Stars
             // 
-            this.btn_Stars.Location = new System.Drawing.Point(202, 98);
+            this.btn_Stars.Location = new System.Drawing.Point(202, 127);
             this.btn_Stars.Name = "btn_Stars";
             this.btn_Stars.Size = new System.Drawing.Size(70, 23);
             this.btn_Stars.TabIndex = 14;
@@ -139,7 +142,7 @@
             // lbl_Stars
             // 
             this.lbl_Stars.AutoSize = true;
-            this.lbl_Stars.Location = new System.Drawing.Point(12, 103);
+            this.lbl_Stars.Location = new System.Drawing.Point(12, 132);
             this.lbl_Stars.Name = "lbl_Stars";
             this.lbl_Stars.Size = new System.Drawing.Size(37, 13);
             this.lbl_Stars.TabIndex = 13;
@@ -148,7 +151,7 @@
             // lbl_StarsAmount
             // 
             this.lbl_StarsAmount.AutoSize = true;
-            this.lbl_StarsAmount.Location = new System.Drawing.Point(95, 103);
+            this.lbl_StarsAmount.Location = new System.Drawing.Point(95, 132);
             this.lbl_StarsAmount.Name = "lbl_StarsAmount";
             this.lbl_StarsAmount.Size = new System.Drawing.Size(43, 13);
             this.lbl_StarsAmount.TabIndex = 12;
@@ -156,7 +159,7 @@
             // 
             // btn_Planets
             // 
-            this.btn_Planets.Location = new System.Drawing.Point(202, 127);
+            this.btn_Planets.Location = new System.Drawing.Point(202, 156);
             this.btn_Planets.Name = "btn_Planets";
             this.btn_Planets.Size = new System.Drawing.Size(70, 23);
             this.btn_Planets.TabIndex = 17;
@@ -166,7 +169,7 @@
             // lbl_Planets
             // 
             this.lbl_Planets.AutoSize = true;
-            this.lbl_Planets.Location = new System.Drawing.Point(12, 132);
+            this.lbl_Planets.Location = new System.Drawing.Point(12, 161);
             this.lbl_Planets.Name = "lbl_Planets";
             this.lbl_Planets.Size = new System.Drawing.Size(48, 13);
             this.lbl_Planets.TabIndex = 16;
@@ -175,7 +178,7 @@
             // lbl_PlanetsAmount
             // 
             this.lbl_PlanetsAmount.AutoSize = true;
-            this.lbl_PlanetsAmount.Location = new System.Drawing.Point(95, 132);
+            this.lbl_PlanetsAmount.Location = new System.Drawing.Point(95, 161);
             this.lbl_PlanetsAmount.Name = "lbl_PlanetsAmount";
             this.lbl_PlanetsAmount.Size = new System.Drawing.Size(56, 13);
             this.lbl_PlanetsAmount.TabIndex = 15;
@@ -183,7 +186,7 @@
             // 
             // btn_Asteroids
             // 
-            this.btn_Asteroids.Location = new System.Drawing.Point(202, 156);
+            this.btn_Asteroids.Location = new System.Drawing.Point(202, 185);
             this.btn_Asteroids.Name = "btn_Asteroids";
             this.btn_Asteroids.Size = new System.Drawing.Size(70, 23);
             this.btn_Asteroids.TabIndex = 20;
@@ -193,7 +196,7 @@
             // lbl_Asteroids
             // 
             this.lbl_Asteroids.AutoSize = true;
-            this.lbl_Asteroids.Location = new System.Drawing.Point(12, 161);
+            this.lbl_Asteroids.Location = new System.Drawing.Point(12, 190);
             this.lbl_Asteroids.Name = "lbl_Asteroids";
             this.lbl_Asteroids.Size = new System.Drawing.Size(56, 13);
             this.lbl_Asteroids.TabIndex = 19;
@@ -202,17 +205,47 @@
             // lbl_AsteroidsAmount
             // 
             this.lbl_AsteroidsAmount.AutoSize = true;
-            this.lbl_AsteroidsAmount.Location = new System.Drawing.Point(95, 161);
+            this.lbl_AsteroidsAmount.Location = new System.Drawing.Point(95, 190);
             this.lbl_AsteroidsAmount.Name = "lbl_AsteroidsAmount";
             this.lbl_AsteroidsAmount.Size = new System.Drawing.Size(69, 13);
             this.lbl_AsteroidsAmount.TabIndex = 18;
             this.lbl_AsteroidsAmount.Text = "ASTEROIDS";
+            // 
+            // btn_Galaxies
+            // 
+            this.btn_Galaxies.Location = new System.Drawing.Point(202, 39);
+            this.btn_Galaxies.Name = "btn_Galaxies";
+            this.btn_Galaxies.Size = new System.Drawing.Size(70, 23);
+            this.btn_Galaxies.TabIndex = 23;
+            this.btn_Galaxies.Text = "View List";
+            this.btn_Galaxies.UseVisualStyleBackColor = true;
+            // 
+            // lbl_Galaxies
+            // 
+            this.lbl_Galaxies.AutoSize = true;
+            this.lbl_Galaxies.Location = new System.Drawing.Point(12, 44);
+            this.lbl_Galaxies.Name = "lbl_Galaxies";
+            this.lbl_Galaxies.Size = new System.Drawing.Size(47, 13);
+            this.lbl_Galaxies.TabIndex = 22;
+            this.lbl_Galaxies.Text = "Galaxies";
+            // 
+            // lbl_GalaxiesAmount
+            // 
+            this.lbl_GalaxiesAmount.AutoSize = true;
+            this.lbl_GalaxiesAmount.Location = new System.Drawing.Point(95, 44);
+            this.lbl_GalaxiesAmount.Name = "lbl_GalaxiesAmount";
+            this.lbl_GalaxiesAmount.Size = new System.Drawing.Size(59, 13);
+            this.lbl_GalaxiesAmount.TabIndex = 21;
+            this.lbl_GalaxiesAmount.Text = "GALAXIES";
             // 
             // InspectUniverse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btn_Galaxies);
+            this.Controls.Add(this.lbl_Galaxies);
+            this.Controls.Add(this.lbl_GalaxiesAmount);
             this.Controls.Add(this.btn_Asteroids);
             this.Controls.Add(this.lbl_Asteroids);
             this.Controls.Add(this.lbl_AsteroidsAmount);
@@ -261,5 +294,8 @@
         private System.Windows.Forms.Button btn_Asteroids;
         private System.Windows.Forms.Label lbl_Asteroids;
         private System.Windows.Forms.Label lbl_AsteroidsAmount;
+        private System.Windows.Forms.Button btn_Galaxies;
+        private System.Windows.Forms.Label lbl_Galaxies;
+        private System.Windows.Forms.Label lbl_GalaxiesAmount;
     }
 }
