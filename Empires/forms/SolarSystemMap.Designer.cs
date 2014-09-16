@@ -43,6 +43,9 @@
             this.btn_ZoomOut = new System.Windows.Forms.Button();
             this.btn_MoveLeft = new System.Windows.Forms.Button();
             this.btn_MoveRight = new System.Windows.Forms.Button();
+            this.cb_AsteroidDraw = new System.Windows.Forms.CheckBox();
+            this.cb_StarName = new System.Windows.Forms.CheckBox();
+            this.cb_PlanetDraw = new System.Windows.Forms.CheckBox();
             this.tc_Controls.SuspendLayout();
             this.tp_Controls.SuspendLayout();
             this.SuspendLayout();
@@ -53,11 +56,14 @@
             this.tc_Controls.Location = new System.Drawing.Point(12, 12);
             this.tc_Controls.Name = "tc_Controls";
             this.tc_Controls.SelectedIndex = 0;
-            this.tc_Controls.Size = new System.Drawing.Size(181, 350);
+            this.tc_Controls.Size = new System.Drawing.Size(181, 424);
             this.tc_Controls.TabIndex = 11;
             // 
             // tp_Controls
             // 
+            this.tp_Controls.Controls.Add(this.cb_PlanetDraw);
+            this.tp_Controls.Controls.Add(this.cb_AsteroidDraw);
+            this.tp_Controls.Controls.Add(this.cb_StarName);
             this.tp_Controls.Controls.Add(this.cb_AsteroidOrbits);
             this.tp_Controls.Controls.Add(this.cb_AsteroidNames);
             this.tp_Controls.Controls.Add(this.cb_PlanetOrbits);
@@ -74,7 +80,7 @@
             this.tp_Controls.Location = new System.Drawing.Point(4, 22);
             this.tp_Controls.Name = "tp_Controls";
             this.tp_Controls.Padding = new System.Windows.Forms.Padding(3);
-            this.tp_Controls.Size = new System.Drawing.Size(173, 324);
+            this.tp_Controls.Size = new System.Drawing.Size(173, 398);
             this.tp_Controls.TabIndex = 0;
             this.tp_Controls.Text = "Map Controls";
             this.tp_Controls.UseVisualStyleBackColor = true;
@@ -82,7 +88,7 @@
             // cb_AsteroidOrbits
             // 
             this.cb_AsteroidOrbits.AutoSize = true;
-            this.cb_AsteroidOrbits.Location = new System.Drawing.Point(7, 300);
+            this.cb_AsteroidOrbits.Location = new System.Drawing.Point(6, 371);
             this.cb_AsteroidOrbits.Name = "cb_AsteroidOrbits";
             this.cb_AsteroidOrbits.Size = new System.Drawing.Size(94, 17);
             this.cb_AsteroidOrbits.TabIndex = 12;
@@ -93,7 +99,7 @@
             // cb_AsteroidNames
             // 
             this.cb_AsteroidNames.AutoSize = true;
-            this.cb_AsteroidNames.Location = new System.Drawing.Point(7, 276);
+            this.cb_AsteroidNames.Location = new System.Drawing.Point(6, 347);
             this.cb_AsteroidNames.Name = "cb_AsteroidNames";
             this.cb_AsteroidNames.Size = new System.Drawing.Size(98, 17);
             this.cb_AsteroidNames.TabIndex = 11;
@@ -104,7 +110,7 @@
             // cb_PlanetOrbits
             // 
             this.cb_PlanetOrbits.AutoSize = true;
-            this.cb_PlanetOrbits.Location = new System.Drawing.Point(7, 253);
+            this.cb_PlanetOrbits.Location = new System.Drawing.Point(6, 301);
             this.cb_PlanetOrbits.Name = "cb_PlanetOrbits";
             this.cb_PlanetOrbits.Size = new System.Drawing.Size(86, 17);
             this.cb_PlanetOrbits.TabIndex = 10;
@@ -115,7 +121,7 @@
             // cb_PlanetNames
             // 
             this.cb_PlanetNames.AutoSize = true;
-            this.cb_PlanetNames.Location = new System.Drawing.Point(7, 229);
+            this.cb_PlanetNames.Location = new System.Drawing.Point(6, 277);
             this.cb_PlanetNames.Name = "cb_PlanetNames";
             this.cb_PlanetNames.Size = new System.Drawing.Size(92, 17);
             this.cb_PlanetNames.TabIndex = 9;
@@ -212,6 +218,36 @@
             this.btn_MoveRight.UseVisualStyleBackColor = true;
             this.btn_MoveRight.Click += new System.EventHandler(this.btn_MoveRight_Click);
             // 
+            // cb_AsteroidDraw
+            // 
+            this.cb_AsteroidDraw.AutoSize = true;
+            this.cb_AsteroidDraw.Location = new System.Drawing.Point(6, 324);
+            this.cb_AsteroidDraw.Name = "cb_AsteroidDraw";
+            this.cb_AsteroidDraw.Size = new System.Drawing.Size(97, 17);
+            this.cb_AsteroidDraw.TabIndex = 13;
+            this.cb_AsteroidDraw.Text = "Draw Asteroids";
+            this.cb_AsteroidDraw.UseVisualStyleBackColor = true;
+            // 
+            // cb_StarName
+            // 
+            this.cb_StarName.AutoSize = true;
+            this.cb_StarName.Location = new System.Drawing.Point(6, 231);
+            this.cb_StarName.Name = "cb_StarName";
+            this.cb_StarName.Size = new System.Drawing.Size(76, 17);
+            this.cb_StarName.TabIndex = 14;
+            this.cb_StarName.Text = "Star Name";
+            this.cb_StarName.UseVisualStyleBackColor = true;
+            // 
+            // cb_PlanetDraw
+            // 
+            this.cb_PlanetDraw.AutoSize = true;
+            this.cb_PlanetDraw.Location = new System.Drawing.Point(6, 254);
+            this.cb_PlanetDraw.Name = "cb_PlanetDraw";
+            this.cb_PlanetDraw.Size = new System.Drawing.Size(89, 17);
+            this.cb_PlanetDraw.TabIndex = 15;
+            this.cb_PlanetDraw.Text = "Draw Planets";
+            this.cb_PlanetDraw.UseVisualStyleBackColor = true;
+            // 
             // SolarSystemMap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,5 +281,8 @@
         private System.Windows.Forms.Button btn_ZoomOut;
         private System.Windows.Forms.Button btn_MoveLeft;
         private System.Windows.Forms.Button btn_MoveRight;
+        private System.Windows.Forms.CheckBox cb_PlanetDraw;
+        private System.Windows.Forms.CheckBox cb_AsteroidDraw;
+        private System.Windows.Forms.CheckBox cb_StarName;
     }
 }
