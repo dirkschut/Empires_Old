@@ -134,5 +134,25 @@ namespace Empires.forms
         {
             drawSolarSystem();
         }
+
+        private void cb_PlanetNames_CheckedChanged(object sender, EventArgs e)
+        {
+            drawSolarSystem();
+        }
+
+        private void cb_PlanetOrbits_CheckedChanged(object sender, EventArgs e)
+        {
+            drawSolarSystem();
+        }
+
+        private void cb_AsteroidNames_CheckedChanged(object sender, EventArgs e)
+        {
+            drawSolarSystem();
+        }
+
+        private void cb_AsteroidOrbits_CheckedChanged(object sender, EventArgs e)
+        {
+            drawSolarSystem();
+        }
     }
 }

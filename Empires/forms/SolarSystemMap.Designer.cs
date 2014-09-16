@@ -88,6 +88,7 @@
             this.cb_AsteroidOrbits.TabIndex = 12;
             this.cb_AsteroidOrbits.Text = "Asteroid Orbits";
             this.cb_AsteroidOrbits.UseVisualStyleBackColor = true;
+            this.cb_AsteroidOrbits.CheckedChanged += new System.EventHandler(this.cb_AsteroidOrbits_CheckedChanged);
             // 
             // cb_AsteroidNames
             // 
@@ -98,6 +99,7 @@
             this.cb_AsteroidNames.TabIndex = 11;
             this.cb_AsteroidNames.Text = "Asteroid names";
             this.cb_AsteroidNames.UseVisualStyleBackColor = true;
+            this.cb_AsteroidNames.CheckedChanged += new System.EventHandler(this.cb_AsteroidNames_CheckedChanged);
             // 
             // cb_PlanetOrbits
             // 
@@ -108,6 +110,7 @@
             this.cb_PlanetOrbits.TabIndex = 10;
             this.cb_PlanetOrbits.Text = "Planet Orbits";
             this.cb_PlanetOrbits.UseVisualStyleBackColor = true;
+            this.cb_PlanetOrbits.CheckedChanged += new System.EventHandler(this.cb_PlanetOrbits_CheckedChanged);
             // 
             // cb_PlanetNames
             // 
@@ -118,6 +121,7 @@
             this.cb_PlanetNames.TabIndex = 9;
             this.cb_PlanetNames.Text = "Planet Names";
             this.cb_PlanetNames.UseVisualStyleBackColor = true;
+            this.cb_PlanetNames.CheckedChanged += new System.EventHandler(this.cb_PlanetNames_CheckedChanged);
             // 
             // cb_SolarSystem
             // 
