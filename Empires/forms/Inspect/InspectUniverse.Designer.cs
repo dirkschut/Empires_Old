@@ -219,6 +219,7 @@
             this.btn_Galaxies.TabIndex = 23;
             this.btn_Galaxies.Text = "View List";
             this.btn_Galaxies.UseVisualStyleBackColor = true;
+            this.btn_Galaxies.Click += new System.EventHandler(this.btn_Galaxies_Click);
             // 
             // lbl_Galaxies
             // 

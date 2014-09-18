@@ -75,5 +75,12 @@ namespace Empires.forms
             this.lbl_PlanetsAmount.Text = planets.ToString();
             this.lbl_AsteroidsAmount.Text = asteroids.ToString();
         }
+
+        private void btn_Galaxies_Click(object sender, EventArgs e)
+        {
+            GalaxyList galaxyList = new GalaxyList();
+            galaxyList.Show();
+            galaxyList.setUniverse(this.universe);
+        }
     }
 }
