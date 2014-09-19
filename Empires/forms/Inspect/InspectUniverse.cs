@@ -82,5 +82,12 @@ namespace Empires.forms
             galaxyList.Show();
             galaxyList.setUniverse(this.universe);
         }
+
+        private void btn_SolarSystems_Click(object sender, EventArgs e)
+        {
+            SolarSystemList solarSystemList = new SolarSystemList();
+            solarSystemList.Show();
+            solarSystemList.setUniverse(this.universe);
+        }
     }
 }

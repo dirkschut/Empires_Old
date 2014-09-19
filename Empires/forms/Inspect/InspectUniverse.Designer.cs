@@ -93,6 +93,7 @@
             this.btn_SolarSystems.TabIndex = 7;
             this.btn_SolarSystems.Text = "View List";
             this.btn_SolarSystems.UseVisualStyleBackColor = true;
+            this.btn_SolarSystems.Click += new System.EventHandler(this.btn_SolarSystems_Click);
             // 
             // btn_ViewMap
             // 
