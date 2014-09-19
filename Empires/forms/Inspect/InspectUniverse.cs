@@ -89,5 +89,12 @@ namespace Empires.forms
             solarSystemList.Show();
             solarSystemList.setUniverse(this.universe);
         }
+
+        private void btn_ViewMap_Click(object sender, EventArgs e)
+        {
+            UniverseMap universeMap = new UniverseMap();
+            universeMap.Show();
+            universeMap.setUniverse(this.universe);
+        }
     }
 }

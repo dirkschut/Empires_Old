@@ -149,5 +149,11 @@ namespace Empires.forms
         {
             drawUniverse();
         }
+
+        public void setUniverse(int universe)
+        {
+            this.cb_Universe.SelectedIndex = universe;
+            drawUniverse();
+        }
     }
 }

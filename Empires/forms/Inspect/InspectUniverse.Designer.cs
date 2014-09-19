@@ -103,6 +103,7 @@
             this.btn_ViewMap.TabIndex = 8;
             this.btn_ViewMap.Text = "View Map";
             this.btn_ViewMap.UseVisualStyleBackColor = true;
+            this.btn_ViewMap.Click += new System.EventHandler(this.btn_ViewMap_Click);
             // 
             // btn_Bodies
             // 
