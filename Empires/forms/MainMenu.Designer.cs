@@ -33,6 +33,7 @@
             this.btn_ManagePackages = new System.Windows.Forms.Button();
             this.btn_Settings = new System.Windows.Forms.Button();
             this.btn_Exit = new System.Windows.Forms.Button();
+            this.btn_JoinGame = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_NewGame
@@ -57,7 +58,7 @@
             // 
             // btn_ManagePackages
             // 
-            this.btn_ManagePackages.Location = new System.Drawing.Point(13, 73);
+            this.btn_ManagePackages.Location = new System.Drawing.Point(13, 102);
             this.btn_ManagePackages.Name = "btn_ManagePackages";
             this.btn_ManagePackages.Size = new System.Drawing.Size(259, 23);
             this.btn_ManagePackages.TabIndex = 2;
@@ -67,7 +68,7 @@
             // 
             // btn_Settings
             // 
-            this.btn_Settings.Location = new System.Drawing.Point(12, 102);
+            this.btn_Settings.Location = new System.Drawing.Point(12, 131);
             this.btn_Settings.Name = "btn_Settings";
             this.btn_Settings.Size = new System.Drawing.Size(260, 23);
             this.btn_Settings.TabIndex = 3;
@@ -76,18 +77,28 @@
             // 
             // btn_Exit
             // 
-            this.btn_Exit.Location = new System.Drawing.Point(12, 132);
+            this.btn_Exit.Location = new System.Drawing.Point(12, 161);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(260, 23);
             this.btn_Exit.TabIndex = 4;
             this.btn_Exit.Text = "Exit";
             this.btn_Exit.UseVisualStyleBackColor = true;
             // 
+            // btn_JoinGame
+            // 
+            this.btn_JoinGame.Location = new System.Drawing.Point(13, 73);
+            this.btn_JoinGame.Name = "btn_JoinGame";
+            this.btn_JoinGame.Size = new System.Drawing.Size(259, 23);
+            this.btn_JoinGame.TabIndex = 5;
+            this.btn_JoinGame.Text = "Join Game";
+            this.btn_JoinGame.UseVisualStyleBackColor = true;
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btn_JoinGame);
             this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.btn_Settings);
             this.Controls.Add(this.btn_ManagePackages);
@@ -109,5 +120,6 @@
         private System.Windows.Forms.Button btn_ManagePackages;
         private System.Windows.Forms.Button btn_Settings;
         private System.Windows.Forms.Button btn_Exit;
+        private System.Windows.Forms.Button btn_JoinGame;
     }
 }
