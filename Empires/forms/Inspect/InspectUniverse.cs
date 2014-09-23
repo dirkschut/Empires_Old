@@ -96,5 +96,12 @@ namespace Empires.forms
             universeMap.Show();
             universeMap.setUniverse(this.universe);
         }
+
+        private void btn_Bodies_Click(object sender, EventArgs e)
+        {
+            BodiesList bodiesList = new BodiesList();
+            bodiesList.Show();
+            bodiesList.setUniverse(this.universe);
+        }
     }
 }

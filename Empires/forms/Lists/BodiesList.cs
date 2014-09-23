@@ -26,5 +26,10 @@ namespace Empires.forms
                 this.lb_Bodies.Items.Add(body.ID + " - " + body.name);
             }
         }
+
+        public void setUniverse(int universe)
+        {
+            
+        }
     }
 }

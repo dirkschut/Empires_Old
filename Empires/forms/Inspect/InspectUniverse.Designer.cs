@@ -113,6 +113,7 @@
             this.btn_Bodies.TabIndex = 11;
             this.btn_Bodies.Text = "View List";
             this.btn_Bodies.UseVisualStyleBackColor = true;
+            this.btn_Bodies.Click += new System.EventHandler(this.btn_Bodies_Click);
             // 
             // lbl_Bodies
             // 
