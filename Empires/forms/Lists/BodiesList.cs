@@ -86,5 +86,34 @@ namespace Empires.forms
                 this.cb_Universe.Items.Add(universe.ID + " - " + universe.name);
             }
         }
+
+        private void cb_SpecificUniverse_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.cb_Universe.SelectedIndex >= 0)
+            {
+                loadData();
+            }
+        }
+
+        private void cb_SpecificGalaxy_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.cb_Universe.SelectedIndex >= 0)
+            {
+                loadData();
+            }
+        }
+
+        private void cb_SpecificSolarSystem_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.cb_Universe.SelectedIndex >= 0)
+            {
+                loadData();
+            }
+        }
+
+        private void cb_Universe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            loadData();
+        }
     }
 }

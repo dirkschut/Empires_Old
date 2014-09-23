@@ -62,6 +62,7 @@
             this.cb_SpecificUniverse.TabIndex = 2;
             this.cb_SpecificUniverse.Text = "Specific Universe";
             this.cb_SpecificUniverse.UseVisualStyleBackColor = true;
+            this.cb_SpecificUniverse.CheckedChanged += new System.EventHandler(this.cb_SpecificUniverse_CheckedChanged);
             // 
             // cb_SpecificSolarSystem
             // 
@@ -72,6 +73,7 @@
             this.cb_SpecificSolarSystem.TabIndex = 3;
             this.cb_SpecificSolarSystem.Text = "Specific Solar System";
             this.cb_SpecificSolarSystem.UseVisualStyleBackColor = true;
+            this.cb_SpecificSolarSystem.CheckedChanged += new System.EventHandler(this.cb_SpecificSolarSystem_CheckedChanged);
             // 
             // cb_SpecificGalaxy
             // 
@@ -82,6 +84,7 @@
             this.cb_SpecificGalaxy.TabIndex = 4;
             this.cb_SpecificGalaxy.Text = "Specific Galaxy";
             this.cb_SpecificGalaxy.UseVisualStyleBackColor = true;
+            this.cb_SpecificGalaxy.CheckedChanged += new System.EventHandler(this.cb_SpecificGalaxy_CheckedChanged);
             // 
             // cb_Universe
             // 
@@ -90,6 +93,7 @@
             this.cb_Universe.Name = "cb_Universe";
             this.cb_Universe.Size = new System.Drawing.Size(197, 21);
             this.cb_Universe.TabIndex = 5;
+            this.cb_Universe.SelectedIndexChanged += new System.EventHandler(this.cb_Universe_SelectedIndexChanged);
             // 
             // BodiesList
             // 
